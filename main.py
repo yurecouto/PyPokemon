@@ -1,22 +1,31 @@
+from random import choice
 from classes import *
-from functions import *
+from structure_functions import *
 
-charmander = Fire('Charmander')
-squirtle = Water('Squirtle')
-bulbasaur = Grass('Bulbasaur')
-pikachu = Electric('Pikachu')
+while True:
+    charmander = Fire('Charmander')
+    squirtle = Water('Squirtle')
+    bulbasaur = Grass('Bulbasaur')
+    pikachu = Electric('Pikachu')
 
-while pikachu.health > 0:
+    title()
+    main_menu()
 
-    main_interface(charmander.name,         pikachu.name,
-                   charmander.max_health,   pikachu.max_health,
-                   charmander.health,       pikachu.health,
-                   charmander.xp,           pikachu.xp)
+    game = int(input('>>> '))
 
-    game_interface(bulbasaur.name)
+    while game == 1:
+        initial_menu(bulbasaur.name, squirtle.name, charmander.name, pikachu.name)
 
-    action = int(input('>>> '))
+        initial_pokemon = str(input('>>>'))
 
-    while action == 1:
-        charmander.atack(pikachu)
+        while initial_pokemon.upper() == 'CHARMANDER':
+            p1 = charmander
+
+            p2 = pikachu
+
+            game_interface(p1)
+            main_interface(p1, p2)
+
         break
+
+    #main_interface(charmander, squirtle)
