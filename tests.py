@@ -1,8 +1,16 @@
 from structure_functions import *
 from classes import *
 
-charmander = Fire('Charmander')
-pikachu = Electric('Pikachu')
 
+bulbasaur    = Grass('Bulbasaur')
+charmander   = Fire('Charmander')
+pikachu      = Electric('Pikachu')
+eevee        = Normal('Eevee')
+gengar       = Ghost('Gengar')
 
-action_status('de tamanho')
+eevee.atack(gengar)
+charmander.atack(bulbasaur)
+
+print(gengar.health)
+print(bulbasaur.health)
+print(eevee.name)

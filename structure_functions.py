@@ -49,6 +49,7 @@ def initial_menu(ip_1, ip_2, ip_3, ip_4):
     print('*' * 100)
     print()
 
+
 def main_interface(p_1, p_2):
     print('-' * 100)
     print(f'|{p_1.name:^58}||{p_2.name:^58}|')

@@ -10,17 +10,30 @@ class Pokemon:
         self.health = 100
         self.max_health = 100
 
-    def atack(self, pokemon):
-        var = damage(pokemon.max_health)
-        pokemon.health -= var
-        return pokemon.health
-
 
 class Normal(Pokemon):
     def __init__(self, name):
         super().__init__(name)
         self.name = f'\033[1;37m{name}\033[m'
         self.type = 'normal'
+    
+    def atack(self, opponent):
+        #Normal Atack
+        if opponent.type in 'normal fire water grass electric ice fighting poison ground flying psychic bug dragon dark fairy':
+            d1 = damage(opponent.max_health) 
+            opponent.health -= d1
+            return opponent.health
+
+        #Weak Atack
+        elif opponent.type in 'rock steel':
+            d1 = damage(opponent.max_health, 2, 12)   
+            opponent.health -= d1
+            return opponent.health
+
+        #No Effective Atack
+        elif opponent.type in 'ghost':
+            opponent.health -= 0                      
+            return opponent.health
 
 
 class Fire(Pokemon):
@@ -28,6 +41,25 @@ class Fire(Pokemon):
         super().__init__(name)
         self.name = f'\033[1;91m{name}\033[m'
         self.type = 'fire'
+    
+    def atack(self, opponent):
+        #Normal Atack
+        if opponent.type in 'normal electric fighting poison ground flying psychic ghost dark fairy':
+            d1 = damage(opponent.max_health)          
+            opponent.health -= d1
+            return opponent.health   
+
+        #Weak Atack
+        elif opponent.type in 'fire water rock dragon':
+            d1 = damage(opponent.max_health, 2, 12)   #Weak Atack
+            opponent.health -= d1
+            return opponent.health
+
+        #Strong Atack
+        elif opponent.type in 'grass ice bug steel':
+            d1 = damage(opponent.max_health, 10, 50)   
+            opponent.health -= d1
+            return opponent.health
 
 
 class Water(Pokemon):
@@ -35,6 +67,26 @@ class Water(Pokemon):
         super().__init__(name)
         self.name = f'\033[1;34m{name}\033[m'
         self.type = 'water'
+
+    
+    def atack(self, opponent):
+        #Normal Atack
+        if opponent.type in 'normal electric ice fighting poison flying psychic bug ghost dark steel fairy':
+            d1 = damage(opponent.max_health)          
+            opponent.health -= d1
+            return opponent.health   
+
+        #Weak Atack
+        elif opponent.type in 'water grass dragon':
+            d1 = damage(opponent.max_health, 2, 12)   #Weak Atack
+            opponent.health -= d1
+            return opponent.health
+
+        #Strong Atack
+        elif opponent.type in 'frie ground rock':
+            d1 = damage(opponent.max_health, 10, 50)   
+            opponent.health -= d1
+            return opponent.health
 
 
 class Grass(Pokemon):
