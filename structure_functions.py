@@ -1,4 +1,5 @@
 def title():
+    print()
     print('*' * 100)
     print('|', ' ' * 96, '|')
     print(
@@ -18,9 +19,11 @@ def title():
           )
     print('|', ' ' * 96, '|')
     print('*' * 100)
+    print()
 
 
 def main_menu():
+    print('*' * 100)
     new_game = '\033[1;34mNEW GAME\033[m'
     continue_game = '\033[1;92mCONTINUE\033[m'
     game_credits = '\033[1;93mCREDITS\033[m'
@@ -29,9 +32,11 @@ def main_menu():
     print(f"|{f'Press 1 for {new_game} | 2 to try to {continue_game} | 3 to see your {game_credits}':^128}|")
     print('|', ' ' * 96, '|')
     print('*' * 100)
+    print()
 
 
 def initial_menu(ip_1, ip_2, ip_3, ip_4):
+    print()
     print('*' * 100)
     print('|', ' ' * 96, '|')
     print(f'|{"Choose your initial Pokemon!":^98}|')
@@ -39,7 +44,7 @@ def initial_menu(ip_1, ip_2, ip_3, ip_4):
     print(f'|{f"{ip_1} | {ip_2} | {ip_3} | {ip_4}":^138}|')
     print('|', ' ' * 96, '|')
     print('*' * 100)
-
+    print()
 
 def main_interface(p_1, p_2):
     print('-' * 100)
@@ -55,9 +60,11 @@ def main_interface(p_1, p_2):
           f' XP.......................{xp_bar(p_2.xp, 100)}|')
 
     print('*' * 100)
+    print()
 
 
 def game_interface(my_pokemon):
+    print()
     atack = '\033[1;91mATACK\033[m'
     capture = '\033[1;92mCAPTURE\033[m'
     bag = '\033[1;93mBAG\033[m'

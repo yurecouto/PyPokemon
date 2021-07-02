@@ -1,4 +1,5 @@
 from random import randint
+from game_functions import damage
 
 
 class Pokemon:
@@ -9,8 +10,8 @@ class Pokemon:
         self.health = 100
         self.max_health = 100
 
-    def atack(self, pokemon, min_atack, max_atack):
-        damage = randint(min_atack, max_atack)
+    def atack(self, pokemon, max_health):
+        damage(max_health)
         pokemon.health -= damage
         return pokemon.health
 
