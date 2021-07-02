@@ -1,16 +1,17 @@
-def do_health(max_health, health):
+from structure_functions import *
+from classes import *
 
-    health_dashes = 20  # Max Displayed dashes
+charmander = Fire('Charmander')
+pikachu = Electric('Pikachu')
 
-    dash_convert = int(max_health/health_dashes)                 # Get the number to divide by to convert health to dashes (being 10)
-    current_dashes = int(health/dash_convert)                     # Convert health to dash count: 80/10 => 8 dashes
-    remaining_health = health_dashes - current_dashes             # Get the health remaining to fill as space => 12 spaces
+min_atack = (charmander.health * 10) / 100
+max_atack = (charmander.health * 30) / 100
 
-    health_display = '\033[1;92m*\033[m' * current_dashes         # Convert 8 to 8 dashes as a string:   "--------"
-    remaining_display = '-' * remaining_health                    # Convert 12 to 12 spaces as a string: "            "
+while True:
+    main_interface(charmander, pikachu)
 
-    print("|" + health_display + remaining_display + "|" + f'( {health} / {max_health} )')# Print out textbased healthbar
+    action_test = int(input('>>> '))
 
-
-do_health(200, 169)
-
+    while action_test == 1:
+        charmander.atack(pikachu, min_atack, max_atack)
+        break

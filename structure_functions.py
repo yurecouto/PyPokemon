@@ -8,12 +8,12 @@ def title():
           '|\033[1;91m                      ▄████▄               ▄▄     ▄▄     ▄█  █▄                                   \033[m|\n'
           '|\033[1;91m                  ▄███████████       ▄██  ▄███ ▄██████  ███  ██▄        ███                       \033[m|\n'
           '|\033[1;91m                  ██████▄  ████      ██████▀  ██    ██  ███ ████    ▄▄   ███  ███                 \033[m|\n'
-          '|\033[1;91m                    ▀████   ██▀ ▄██▄   ████   ███  ▀▀   ████████  ██████ ███  ██▀                 \033[m|\n'
+          '|\033[1;91m                    ▀████   ██▀ ▄██▄  ▀████   ███  ▀▀   ████████  ██████ ███  ██▀                 \033[m|\n'
           '|\033[1;91m                     ▀███▄ ▄█▀ ██████  ██████  ███▄▄▄▄█ ██ ██▀▀█ ██    ██ ██████                  \033[m|\n'
-          '|\033[1;91m                      ▀█████▀ ███  ███ ██  ███▄  ▀███▀ ██  █▀  █ ██▄▄▄▄█ ██████▀                  \033[m|\n'
+          '|\033[1;91m                      ▀█████▀ ███  ███ ██  ███▄  ▀███▀ ██  █▀  █ ██▄  ▄█ ██████▀                  \033[m|\n'
           '|\033[1;91m                       ▀███▀   ██████  ██    ▀███▄              ▀ █████ ██  ███                   \033[m|\n'
           '|\033[1;91m                        ▀███▄   ▀██▀   ██       ▀▀                  ▀▀ ██   ██▀                   \033[m|\n'
-          '|\033[1;91m                         ▀███                                               ██                    \033[m|\n'
+          '|\033[1;91m                         ▀███           ▀                                   ██                    \033[m|\n'
           '|\033[1;91m                          ▀██▄              AN OOP ADVENTURE!               █▀                    \033[m|'
           )
     print('|', ' ' * 96, '|')
@@ -42,10 +42,9 @@ def initial_menu(ip_1, ip_2, ip_3, ip_4):
 
 
 def main_interface(p_1, p_2):
-    print('*' * 100)
-    print('=' * 100)
+    print('-' * 100)
     print(f'|{p_1.name:^58}||{p_2.name:^58}|')
-    print('=' * 100)
+    print('-' * 100)
 
     print(f'|{"Status":^48}||{"Status":^48}|')
 
@@ -55,9 +54,7 @@ def main_interface(p_1, p_2):
     print(f'| XP.......................{xp_bar(p_1.xp, 100)}||'
           f' XP.......................{xp_bar(p_2.xp, 100)}|')
 
-    '''print(f'| * Level {l_1:39}|| * Level {l_2:39}|')
-       print(f'| * XP {x_1:42}|| * XP {x_2:42}|')'''
-    print('=' * 100)
+    print('*' * 100)
 
 
 def game_interface(my_pokemon):
@@ -65,14 +62,22 @@ def game_interface(my_pokemon):
     capture = '\033[1;92mCAPTURE\033[m'
     bag = '\033[1;93mBAG\033[m'
 
+    print('*' * 100)
     print(f'|{"Options":^98}|')
-    print('=' * 100)
+    print('-' * 100)
 
-    print(f"|{f'My Pokemon: {my_pokemon}!':^108}|")
+    print(f"|{f'My Pokemon: {my_pokemon.name}!':^108}|")
 
     print(f'|{" " * 98}|')
     print(f"|{f'Press 1 for {atack} | 2 to try to {capture} | 3 to see your {bag}':^128}|")
-    print('=' * 100)
+
+
+def action_status(action):
+    print('*' * 100)
+    print(' ', ' ' * 96, ' ')
+    print(f' >>> {action:<100}' + ' ')
+    print(' ', ' ' * 96, ' ')
+    print('*' * 100)
 
 
 def health_bar(max_health, health):
@@ -101,4 +106,6 @@ def xp_bar(xp, max_xp):
     remaining_display = '-' * remaining_xp                   # Convert 12 to 12 spaces as a string: "            "
 
     return "(" + health_display + remaining_display + ")" # Print out textbased healthbar
+
+
 

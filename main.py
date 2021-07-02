@@ -1,4 +1,4 @@
-from random import choice
+from time import sleep
 from classes import *
 from structure_functions import *
 
@@ -16,16 +16,22 @@ while True:
     while game == 1:
         initial_menu(bulbasaur.name, squirtle.name, charmander.name, pikachu.name)
 
-        initial_pokemon = str(input('>>>'))
+        initial_pokemon = str(input('>>> '))
 
         while initial_pokemon.upper() == 'CHARMANDER':
             p1 = charmander
-
             p2 = pikachu
 
-            game_interface(p1)
-            main_interface(p1, p2)
+            while True:
+                game_interface(p1)
+                main_interface(p1, p2)
 
-        break
+                action = int(input('>>> '))
 
-    #main_interface(charmander, squirtle)
+                while action == 1:
+                    p1.atack(p2)
+                    break
+
+                p2.atack(p1)
+
+
