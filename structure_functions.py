@@ -1,3 +1,6 @@
+from time import perf_counter
+
+
 def title():
     print()
     print('*' * 100)
@@ -80,11 +83,13 @@ def game_interface(my_pokemon):
 
 
 def action_status(action):
+    print()
     print('*' * 100)
     print(' ', ' ' * 96, ' ')
-    print(f' >>> {action:<100}' + ' ')
+    print(f' >>> {action:<100}')
     print(' ', ' ' * 96, ' ')
     print('*' * 100)
+    print()
 
 
 def health_bar(max_health, health):
@@ -113,6 +118,3 @@ def xp_bar(xp, max_xp):
     remaining_display = '-' * remaining_xp                   # Convert 12 to 12 spaces as a string: "            "
 
     return "(" + health_display + remaining_display + ")" # Print out textbased healthbar
-
-
-

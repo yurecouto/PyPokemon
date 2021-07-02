@@ -30,8 +30,10 @@ while True:
 
                 while action == 1:
                     p1.atack(p2)
+                    action_status(f'Your pokemon {p1.name} atacked {p2.name}')
                     break
 
                 p2.atack(p1)
+                action_status(f'The pokemon {p2.name} atacked your {p1.name}')
 
 

@@ -10,9 +10,9 @@ class Pokemon:
         self.health = 100
         self.max_health = 100
 
-    def atack(self, pokemon, max_health):
-        damage(max_health)
-        pokemon.health -= damage
+    def atack(self, pokemon):
+        var = damage(pokemon.max_health)
+        pokemon.health -= var
         return pokemon.health
 
 
