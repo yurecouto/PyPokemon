@@ -1,3 +1,4 @@
+# This list it's based in a pokemon type chart 
 atack_rules = [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, .5, 0, 1, 1, .5, 0]        ,           
     [1, .5, .5, 2, 1, 2, 1, 1, 1, 1, 1, 2, .5, 1, .5, 1, 2, 1]      ,         
@@ -19,6 +20,7 @@ atack_rules = [
     [1, .5, 1, 1, 1, 1, 2, .5, 1, 1, 1, 1, 1, 1, 2, 2, .5, 1]           
 ]
 
+#This dict it's about the atacker types
 atack_types = {
     'normal':    0,
     'fire':      1,
@@ -39,18 +41,10 @@ atack_types = {
     'steel':     16,
     'fairy':     17
 }
-
+#This function receives the atacker and the damaged pokemon types 
+#And searchs in the atack_rules chart the intensity of the atack
 def get_damage(atacker, demaged):
     row      = atack_types[atacker]
     column   = atack_types[demaged]
     return atack_rules[row][column]
 
-
-print(get_damage('fire', 'grass'))
-print(get_damage('fire', 'ice'))
-print(get_damage('fire', 'water'))
-print(get_damage('fire', 'steel'))
-
-print(get_damage('water', 'fire'))
-print(get_damage('water', 'ground'))
-print(get_damage('water', 'rock'))

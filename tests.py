@@ -8,10 +8,7 @@ pikachu      = Electric('Pikachu')
 eevee        = Normal('Eevee')
 gengar       = Ghost('Gengar')
 
-eevee.atack(gengar)
-charmander.atack(bulbasaur)
+eevee.atack(charmander)
 
-eevee.xp = 120
-eevee.level_up()
+print(charmander.health)
 
-print(eevee.lvl)
