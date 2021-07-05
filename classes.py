@@ -1,15 +1,21 @@
-from random import randint
 from game_functions import damage
+from lists import xp_list
 
 
 class Pokemon:
     def __init__(self, name):
         self.name = name
         self.xp = 0
+        self.max_xp = 100
         self.lvl = 1
         self.health = 100
         self.max_health = 100
 
+    # criar lista definindo o max xp, e iterar ela dentro do metodo level up
+    def level_up(self):
+        if self.xp >= self.max_xp:
+            self.lvl += 1
+            
 
 class Normal(Pokemon):
     def __init__(self, name):
@@ -51,7 +57,7 @@ class Fire(Pokemon):
 
         #Weak Atack
         elif opponent.type in 'fire water rock dragon':
-            d1 = damage(opponent.max_health, 2, 12)   #Weak Atack
+            d1 = damage(opponent.max_health, 2, 12) 
             opponent.health -= d1
             return opponent.health
 

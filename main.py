@@ -1,4 +1,3 @@
-from time import sleep
 from classes import *
 from structure_functions import *
 
@@ -14,6 +13,8 @@ while True:
     game = int(input('>>> '))
 
     while game == 1:
+        text_status()
+
         initial_menu(bulbasaur.name, squirtle.name, charmander.name, pikachu.name)
 
         initial_pokemon = str(input('>>> '))
@@ -35,5 +36,4 @@ while True:
 
                 p2.atack(p1)
                 action_status(f'The pokemon {p2.name} atacked your {p1.name}')
-
 

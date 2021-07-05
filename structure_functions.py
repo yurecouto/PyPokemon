@@ -9,7 +9,7 @@ def title():
           '|\033[1;91m                                                   ▄▄▄                                            \033[m|\n'
           '|\033[1;91m                                                ▄█▀▀▀                                             \033[m|\n'
           '|\033[1;91m                                                                                                  \033[m|\n'
-          '|\033[1;91m                      ▄████▄               ▄▄     ▄▄     ▄█  █▄                                   \033[m|\n'
+          '|\033[1;91m                      ▄████▄               ▄▄     ▄▄▄    ▄█  █▄                                   \033[m|\n'
           '|\033[1;91m                  ▄███████████       ▄██  ▄███ ▄██████  ███  ██▄        ███                       \033[m|\n'
           '|\033[1;91m                  ██████▄  ████      ██████▀  ██    ██  ███ ████    ▄▄   ███  ███                 \033[m|\n'
           '|\033[1;91m                    ▀████   ██▀ ▄██▄  ▀████   ███  ▀▀   ████████  ██████ ███  ██▀                 \033[m|\n'
@@ -89,6 +89,18 @@ def action_status(action):
     print(' ', ' ' * 96, ' ')
     print(f' >>> {action:<100}')
     print(' ', ' ' * 96, ' ')
+    print('*' * 100)
+    print()
+
+
+def text_status():
+    print()
+    print('*' * 100)
+    print('|', ' ' * 96, '|')
+    print(f'|{"This Game is an adventure in Python OOP World":^98}|')    
+    print(f'|{"In this world the Objects started to take the shape of the Pokemons":^98}|')    
+    print(f'|{"Your mission is to defeat or capture all the objects, good luck!":^98}|')    
+    print('|', ' ' * 96, '|')
     print('*' * 100)
     print()
 

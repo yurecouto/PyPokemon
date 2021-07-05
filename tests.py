@@ -11,6 +11,7 @@ gengar       = Ghost('Gengar')
 eevee.atack(gengar)
 charmander.atack(bulbasaur)
 
-print(gengar.health)
-print(bulbasaur.health)
-print(eevee.name)
+eevee.xp = 120
+eevee.level_up()
+
+print(eevee.lvl)
