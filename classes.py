@@ -8,16 +8,19 @@ class Pokemon:
         self.xp = 0
         self.max_xp = 100
         self.lvl = 1
-        self.health = 100
-        self.max_health = 100
+        self.health = 20
+        self.max_health = 20
 
     def level_up(self):
         if self.xp >= self.max_xp:
-            self.lvl += 1
+            self.lvl        += 1
+            self.max_xp     *= self.lvl
+            self.max_health *= 1.5
+            self.health == self.max_health
 
     def atack(self, opponent):
-        intensity = get_damage(self.type, opponent.type)    # This var receives the return of the function get_damage
-        d1 = damage(opponent.health, intensity)             # And d1 receives the result of the damage function
+        intensity = get_damage(self.type, opponent.type)
+        d1 = damage(opponent.max_health, intensity)          
         opponent.health -= d1
         return opponent.health
             
