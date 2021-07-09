@@ -63,21 +63,21 @@ class Electric(Pokemon):
 class Ice(Pokemon):
     def __init__(self, name):
         super().__init__(name)
-        self.name = f'\033[1;37m{name}\033[m'
+        self.name = f'\033[1;36m{name}\033[m'
         self.type = 'ice'
 
 
 class Fighting(Pokemon):
     def __init__(self, name):
         super().__init__(name)
-        self.name = f'\033[1;37m{name}\033[m'
+        self.name = f'\033[1;31m{name}\033[m'
         self.type = 'fighting'
 
 
 class Poison(Pokemon):
     def __init__(self, name):
         super().__init__(name)
-        self.name = f'\033[1;37m{name}\033[m'
+        self.name = f'\033[1;35m{name}\033[m'
         self.type = 'poison'
 
 
@@ -98,35 +98,35 @@ class Flying(Pokemon):
 class Psychic(Pokemon):
     def __init__(self, name):
         super().__init__(name)
-        self.name = f'\033[1;37m{name}\033[m'
+        self.name = f'\033[1;95m{name}\033[m'
         self.type = 'psychic'
 
 
 class Bug(Pokemon):
     def __init__(self, name):
         super().__init__(name)
-        self.name = f'\033[1;37m{name}\033[m'
+        self.name = f'\033[1;32m{name}\033[m'
         self.type = 'bug'
 
 
 class Rock(Pokemon):
     def __init__(self, name):
         super().__init__(name)
-        self.name = f'\033[1;37m{name}\033[m'
+        self.name = f'\033[1;90m{name}\033[m'
         self.type = 'rock'
 
 
 class Ghost(Pokemon):
     def __init__(self, name):
         super().__init__(name)
-        self.name = f'\033[1;37m{name}\033[m'
+        self.name = f'\033[1;35m{name}\033[m'
         self.type = 'ghost'
 
 
 class Dragon(Pokemon):
     def __init__(self, name):
         super().__init__(name)
-        self.name = f'\033[1;37m{name}\033[m'
+        self.name = f'\033[1;91m{name}\033[m'
         self.type = 'dragon'
 
 

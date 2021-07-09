@@ -1,0 +1,34 @@
+================== Structure ==================
+(*) Plan
+(-) Done
+
+- Title
+
+- Main menu:
+- If input = new game
+	- History box
+
+	- Initial pokemon:
+		* Add pokemon to pokedex
+		* Pokedex explanation
+		* Add 20 Pokeballs on the bag
+
+	* Create an area to clear:
+		* Separate 15 pokemons of random types
+		* If the 15 pokemon get beaten or catched:
+			* Add the area in the areas_map (The player will be able to return to the area)
+			* Add 20 Pokeballs on the bag
+	
+	
+================= To Do List =================
+Create player's object and class:
+	* name
+	* pokeballs
+
+Add more parameters in capture function:
+	* receives the pokeballs number from the player object
+	* use one pokeball each time the player tries to capture 
+	* add more pokeballs types to use with the incidence atribute
+
+Add more atributes in pokemons classes
+	* incidence

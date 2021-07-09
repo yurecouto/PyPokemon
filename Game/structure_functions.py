@@ -38,7 +38,7 @@ def main_menu():
     print()
 
 
-def text_status():
+def history_box():
     print()
     print('*' * 100)
     print('|', ' ' * 96, '|')
@@ -50,13 +50,13 @@ def text_status():
     print()
 
 
-def initial_menu(ip_1, ip_2, ip_3, ip_4):
+def initial_menu(ip_1, ip_2, ip_3):
     print()
     print('*' * 100)
     print('|', ' ' * 96, '|')
     print(f'|{"Choose your initial Pokemon!":^98}|')
     print('|', ' ' * 96, '|')
-    print(f'|{f"{ip_1} | {ip_2} | {ip_3} | {ip_4}":^138}|')
+    print(f'|{f"{ip_1.name} | {ip_2.name} | {ip_3.name}":^128}|')
     print('|', ' ' * 96, '|')
     print('*' * 100)
     print()
