@@ -31,3 +31,4 @@ while True:
             explaination_1()
             player.pokeballs = 20
             
+            

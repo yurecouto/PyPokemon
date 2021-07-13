@@ -15,6 +15,7 @@
 		- Add 20 Pokeballs on the bag
 
 	* Create an area to clear:
+		* Area explanation
 		* Separate 15 pokemons of random types
 		* If the 15 pokemon get beaten or catched:
 			* Add the area in the areas_map (The player will be able to return to the area)
@@ -22,5 +23,30 @@
 	
 	
 ================= To Do List =================
-Add more atributes in pokemons classes
-	* incidence
+Areas:
+	Viridian Forest
+		Machop, Pikachu, Geodude, Caterpie, Butterfree, Bellsprout, Exeggcute, Pidgey, 			Gloom, Clefairy, Beedrill
+		
+	Mount Moon
+		Zubat, Geodude, Paras, Clefairy
+		
+	Cerulean Cave
+	
+	Rock Tunnel
+	
+	Diglett's Cave
+		Digglet, Dugtrio
+		
+	Safari Zone
+		Nidoran, Nidorina, Nidoran, Nidorino, Paras, Parasect, Venonat, Exeggcute, Rhyhorn,
+		Chansey, Tangela, Scyther, Pinsir, Magikarp, Poliwag, Goldeen, Psyduck, Slowpoke, 
+		Krabby, Dratini, Dragonair, Doduo, Cubone, Marowak, Kangaskhan, Tauros, Venomoth
+		
+	Seafoam Islands
+	
+	Power Plant
+	
+	Victory Road
+	Indigo Plateau
+
+
