@@ -46,6 +46,20 @@ def history_box():
     print(f'|{"In this world the Objects started to take the shape of the Pokemons":^98}|')    
     print(f'|{"Your mission is to defeat or capture all the objects, good luck!":^98}|')    
     print('|', ' ' * 96, '|')
+    print(f'|{"Type your name in the input bellow:":^98}|')   
+    print('|', ' ' * 96, '|')
+    print('*' * 100)
+    print()
+
+
+def explaination_1(p1):
+    print()
+    print('*' * 100)
+    print('|', ' ' * 96, '|')
+    print(f'|{f"Your Initial Pokemon was added to the Your pokedex":^98}|')    
+    print(f'|{"Pokedex is a python dictionary. ":^98}|')    
+    print(f'|{"which receives important information about your pokemons.":^98}|')    
+    print('|', ' ' * 96, '|')
     print('*' * 100)
     print()
 

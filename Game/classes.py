@@ -1,6 +1,14 @@
 from game_functions import damage
 from lists import get_damage
 
+class Player:
+    def __init__(self, name):
+        self.name = name
+        self.pokeballs = 0
+        self.greatballs = 0
+        self.ultraballs = 0
+        self.masterballs = 0
+
 
 class Pokemon:
     def __init__(self, name):

@@ -3,15 +3,7 @@ from game_functions         import *
 from classes                import *
 from pokemons               import *
 
-capture(Charmander)
-print(pokedex)
+yure = Player('Yure')
+yure.pokeballs = 20
 
-capture(Squirtle)
-print(pokedex)
-
-capture(Bulbasaur)
-print(pokedex)
-
-capture(Pikachu)
-print(pokedex)
-
+capture(yure, Vaporeon)
