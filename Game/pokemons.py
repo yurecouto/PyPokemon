@@ -1,4 +1,12 @@
 from classes import *
+'''P'''
+'''O'''
+'''K'''
+'''E'''
+'''M'''
+'''O'''
+'''N'''
+'''S'''
 
 # Normal
 Pidgey      = Normal('Pidgey')
@@ -24,12 +32,6 @@ Eevee       = Normal('Eevee')
 Porygon     = Normal('Porygon')
 Snorlax     = Normal('Snorlax')
 
-normal_type = [
-    Pidgey, Pidgeotto, Pidgeot, Rattata, Raticate, Spearow, Fearow, Jigglypuff, Wigglytuff,
-    Meowth, Persian, Farfetchd, Doduo, Dodrio, Lickitung, Chansey, Kangaskhan, Tauros, Ditto, 
-    Eevee, Porygon, Snorlax
-    ]
-
 # Grass
 Bulbasaur   = Grass('Bulbasaur')
 Ivysaur     = Grass('Ivysaur')
@@ -44,11 +46,6 @@ Exeggcute   = Grass('Exeggcute')
 Exeggutor   = Grass('Exeggutor')
 Tangela     = Grass('Tangela')
 
-grass_type = [
-    Bulbasaur, Ivysaur, Venusaur, Oddish, Gloom, Vileplume, Bellsprout, Weepinbell, Victreebel, 
-    Exeggcute, Exeggutor, Tangela
-    ]
-
 # Fire
 Charmander  = Fire('Charmander')
 Charmeleon  = Fire('Charmeleon')
@@ -62,11 +59,6 @@ Rapidash    = Fire('Rapidash')
 Magmar      = Fire('Magmar')
 Flareon     = Fire('Flareon')
 Moltres     = Fire('Moltres')
-
-fire_type = [
-    Charmander, Charmeleon, Charizard, Vulpix, Ninetales, Growlithe, Arcanine, Ponyta, Rapidash,
-    Magmar, Flareon, Moltres
-    ]
 
 # Water
 Squirtle    = Water('Squirtle')
@@ -98,12 +90,6 @@ Gyarados    = Water('Gyarados')
 Lapras      = Water('Lapras')
 Vaporeon    = Water('Vaporeon')
 
-water_type = [
-    Squirtle, Wartortle, Blastoise, Psyduck, Golduck, Poliwag, Poliwhirl, Poliwrath, Tentacool, 
-    Tentacruel, Slowpoke, Slowbro, Seel, Dewgong, Shellder, Cloyster, Krabby, Kingler, Horsea,
-    Seadra, Goldeen, Seaking, Staryu, Starmie, Magikarp, Gyarados, Lapras, Vaporeon
-    ]
-
 # Electric
 Pikachu     = Electric('Pikachu')
 Raichu      = Electric('Raichu')
@@ -115,17 +101,9 @@ Electabuzz  = Electric('Electabuzz')
 Jolteon     = Electric('Jolteon')
 Zapdos      = Electric('Zapdos')
 
-electric_type = [
-    Pikachu, Raichu, Magnemite, Magneton, Voltorb, Electrode, Electabuzz, Jolteon, Zapdos
-    ]
-
 # Ice
 Jynx        = Ice('Jynx')
 Articuno    = Ice('Articuno')
-
-ice_type = [
-    Jynx, Articuno
-    ]
 
 # Fighting
 Mankey      = Fighting('Mankey')
@@ -135,10 +113,6 @@ Machoke     = Fighting('Machoke')
 Machamp     = Fighting('Machamp')
 Hitmonlee   = Fighting('Hitmonlee')
 Hitmonchamp = Fighting('Hitmonchamp')
-
-fighting_type = [
-    Mankey, Primeape, Machop, Machoke, Machamp, Hitmonlee, Hitmonchamp
-    ]
 
 # Poison
 Ekans       = Poison('Ekans')
@@ -156,11 +130,6 @@ Muk         = Poison('Muk')
 Koffing     = Poison('Koffing')
 Weezing     = Poison('Weezing')
 
-poison_type = [
-    Ekans, Arbok, Nidoran, Nidorina, Nidoqueen, Nidorano, Nidorino, Nidoking, Zubat, Golbat, 
-    Grimer, Muk, Koffing, Weezing
-    ]
-
 # Ground
 Sandshrew   = Ground('Sandshrew')
 Sandslash   = Ground('Sandslash')
@@ -171,12 +140,6 @@ Marowak     = Ground('Marowak')
 Rhyhorn     = Ground('Rhyhorn')
 Rhydon      = Ground('Rhydon')
 
-ground_type = [
-    Sandshrew, Sandslash, Diglett, Dugtrio, Cubone, Marowak, Rhyhorn, Rhydon
-    ]
-
-# Flying
-
 # Psychic
 Abra        = Psychic('Abra')
 Kadabra     = Psychic('Kadabra')  
@@ -186,10 +149,6 @@ Hypno       = Psychic('Hypno')
 Mime        = Psychic('Mime')
 Mewtwo      = Psychic('Mewtwo')
 Mew         = Psychic('Mew')
-
-psychic_type = [
-    Abra, Kadabra, Alakazam, Drowzee, Hypno, Mime, Mewtwo, Mew
-    ]
 
 # Bug
 Caterpie    = Bug('Caterpie')
@@ -203,10 +162,7 @@ Parasect    = Bug('Parasect')
 Venonat     = Bug('Venonat')   
 Venomoth    = Bug('Venomoth')
 Scyther     = Bug('Scyther')
-
-bug_type = [
-    Caterpie, Metapod, Butterfree, Weedle, Kakuna, Beedrill, Paras, Parasect, Venonat, Venomoth, Scyther
-    ]
+Pinsir      = Bug('Pinsir')
 
 # Rock
 Geodude     = Rock('Geodude')
@@ -219,18 +175,10 @@ Kabuto      = Rock('Kabuto')
 Kabutops    = Rock('Kabutops')        
 Aerodactyl  = Rock('Aerodactyl')
 
-rock_type = [
-    Geodude, Graveler, Golem, Onix, Omanyte, Omastar, Kabuto, Kabutops, Aerodactyl
-    ]
-
 # Ghost
 Gastly      = Ghost('Gastly')
 Haunter     = Ghost('Haunter')
 Gengar      = Ghost('Gengar')
-
-ghost_type = [
-    Gastly, Haunter, Gengar
-    ]
 
 # Dragon
 Dratini     = Dragon('Dratini')
@@ -241,8 +189,77 @@ dragon_type = [
     Dratini, Dragonair, Dragonite
     ]
 
-# Dark
-
-# Steel
-
 # Fairy
+Clefairy    = Fairy('Clefairy')
+Clefable    = Fairy('Clefairy')
+
+fairy_type = [
+    Clefable, Clefairy
+    ]
+
+'''A'''
+'''R'''
+'''E'''
+'''A'''
+'''S'''
+
+object_forest = [
+    Pikachu, Caterpie, Butterfree, Bellsprout, Exeggcute, 
+    Pidgey, Oddish, Gloom, Clefairy, Beedrill, Weedle, Kakuna, Weepinbell,
+    Abra, Kadabra
+    ]
+
+object_mount = [
+    Zubat, Geodude, Paras, Clefairy, Mankey, Rattata, Raticate,
+    Spearow, Doduo, Jigglypuff, Wigglytuff, Farfetchd, 
+    ]
+
+object_cave = [
+    Arbok, Raichu, Golbat, Parasect, Venomoth, Kadabra, 
+    Magneton, Dodrio, Hypno, Ditto, Voltorb, 
+    ]
+
+object_tunnel = [
+    Zubat, Geodude, Machop, Onix, Diglett, Dugtrio, Machoke,
+    Electrode, Omanyte, Omastar, Sandshrew, Sandslash
+    ]
+
+object_safari = [
+    Nidorano, Nidorina, Nidoran, Nidorino, Venonat, Rhyhorn,
+	Chansey, Tangela, Scyther, Pinsir, Magikarp, Poliwag, 
+    Goldeen, Psyduck, Slowpoke, Krabby, Dratini, Cubone, Marowak, 
+    Kangaskhan, Kingler
+    ]
+
+object_islands = [
+    Zubat, Golbat, Psyduck, Golduck, Slowbro, Slowpoke, Seel, 
+    Shellder, Horsea, Staryu, Krabby, Tentacool, Tentacruel,
+    Poliwag, Dewgong, Poliwhirl, Seadra, 
+    ]
+
+object_road = [
+    Zubat, Golbat, Machop, Machoke, Geodude, Graveler, Onix,
+    Marowak, Rhyhorn, Tauros, Snorlax, Meowth, Persian, Haunter, 
+    Vileplume, Cloyster, Seaking, 
+    ]
+
+object_trees = [
+    Charmeleon, Charizard, Ivysaur, Venusaur, Wartortle, Blastoise,
+    Vulpix, Growlithe, Ponyta, Magmar, Flareon, Gyarados, Exeggutor,
+    Vaporeon, Flareon, Jolteon
+    ]
+
+object_valley = [
+    Eevee, Jynx, Gastly, Scyther, Dragonite, Pidgeot, Fearow,
+    Ninetales, Arcanine, Machamp, Victreebel, Starmie, Electabuzz,
+    Lapras, Aerodactyl, Rapidash, Raichu, Hitmonlee, Hitmonchamp,
+    Snorlax, Porygon, Alakazam, Hypno, Gengar
+    ]
+
+object_center = [Articuno, Zapdos, Moltres, Mew, Mewtwo]
+
+    
+print(
+    len(object_forest) + len(object_mount) + len(object_cave) + len(object_tunnel) + len(object_safari) +
+    len(object_islands) + len(object_road) + len(object_trees) + len(object_valley) + len(object_center)
+    )

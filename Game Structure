@@ -15,17 +15,14 @@
 		- Add 20 Pokeballs on the bag
 
 	* Create an area to clear:
-		* Area explanation
-		* Separate 15 pokemons of random types
-		* If the 15 pokemon get beaten or catched:
-			* Add the area in the areas_map (The player will be able to return to the area)
-			* Add 20 Pokeballs on the bag
+		* Use a list for Separate each area pokemons
+		* Use a len as a logical test
 	
 	
 ================= To Do List =================
 Areas:
 	Viridian Forest
-		Machop, Pikachu, Geodude, Caterpie, Butterfree, Bellsprout, Exeggcute, Pidgey, 			Gloom, Clefairy, Beedrill
+		Machop, Pikachu, Geodude, Caterpie, Butterfree, Bellsprout, Exeggcute, Pidgey, Gloom, Clefairy, Beedrill
 		
 	Mount Moon
 		Zubat, Geodude, Paras, Clefairy
