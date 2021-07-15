@@ -52,13 +52,25 @@ def history_box():
     print()
 
 
-def explaination_1(p1):
+def explaination_1():
     print()
     print('*' * 100)
     print('|', ' ' * 96, '|')
-    print(f'|{f"Your Initial Pokemon was added to the Your pokedex":^98}|')    
+    print(f'|{"Your Initial Pokemon was added to the Your pokedex":^98}|')    
     print(f'|{"Pokedex is a python dictionary. ":^98}|')    
     print(f'|{"which receives important information about your pokemons.":^98}|')    
+    print('|', ' ' * 96, '|')
+    print('*' * 100)
+    print()
+
+
+def area_explaination(area):
+    print()
+    print('*' * 100)
+    print('|', ' ' * 96, '|')
+    print(f'|{area:^98}|')    
+    print(f'|{"Now the game starts, Clear that area!":^98}|')    
+    print(f'|{"You can do this by Capturing the pokemons or beating them!":^98}|')    
     print('|', ' ' * 96, '|')
     print('*' * 100)
     print()
@@ -99,8 +111,8 @@ def main_interface(p_1, p_2):
 
     print(f'|{"Status":^48}||{"Status":^48}|')
 
-    print(f'| Health...................{health_bar(p_1)}||'
-          f' Health...................{health_bar(p_2):}|')
+    print(f'| Health...................{hp_bar(p_1)}||'
+          f' Health...................{hp_bar(p_2)}|')
 
     print(f'| XP.......................{xp_bar(p_1)}||'
           f' XP.......................{xp_bar(p_2)}|')
@@ -112,36 +124,147 @@ def main_interface(p_1, p_2):
 def action_status(action):
     print()
     print('*' * 100)
-    print(' ', ' ' * 96, ' ')
-    print(f' >>> {action:<100}')
-    print(' ', ' ' * 96, ' ')
+    print('|', ' ' * 96, '|')
+    print('|', f'{action:^98}', '|')
+    print('|', ' ' * 96, '|')
     print('*' * 100)
     print()
 
 
-def health_bar(pokemon):
+def hp_bar(p):
+    if p.health > 0:
+        if p.health == p.max_health:
+            return '(' + '\033[1;92m#\033[m' * 20 + ')'
 
-    health_dashes = 20  # Max Displayed dashes
+        elif p.health < p.max_health and p.health >= (p.max_health * 95 ) / 100:
+            return '(' + '\033[1;92m#\033[m' * 19 + '-)'
 
-    dash_convert = int(pokemon.max_health/health_dashes)            # Get the number to divide by to convert health to dashes (being 10)
-    current_dashes = int(pokemon.health/dash_convert)               # Convert health to dash count: 80/10 => 8 dashes
-    remaining_health = health_dashes - current_dashes               # Get the health remaining to fill as space => 12 spaces
+        elif p.health < (p.max_health * 95 ) / 100 and p.health >= (p.max_health * 90 ) / 100:
+            return '(' + '\033[1;92m#\033[m' * 18 + '-' * 2 + ')'
 
-    health_display = '\033[1;92m#\033[m' * current_dashes           # Convert 8 to 8 dashes as a string:   "--------"
-    remaining_display = '-' * remaining_health                      # Convert 12 to 12 spaces as a string: "            "
+        elif p.health < (p.max_health * 90 ) / 100 and p.health >= (p.max_health * 85 ) / 100:
+            return '(' + '\033[1;92m#\033[m' * 17 + '-' * 3 + ')'
 
-    return "(" + health_display + remaining_display + ")"           # Print out textbased healthbar
+        elif p.health < (p.max_health * 85 ) / 100 and p.health >= (p.max_health * 80 ) / 100:
+            return '(' + '\033[1;92m#\033[m' * 16 + '-' * 4 + ')'
+
+        elif p.health < (p.max_health * 80 ) / 100 and p.health >= (p.max_health * 75 ) / 100:
+            return '(' + '\033[1;92m#\033[m' * 15 + '-' * 5 + ')'
+
+        elif p.health < (p.max_health * 75 ) / 100 and p.health >= (p.max_health * 70 ) / 100:
+            return '(' + '\033[1;92m#\033[m' * 14 + '-' * 6 + ')'
+
+        elif p.health < (p.max_health * 70 ) / 100 and p.health >= (p.max_health * 65 ) / 100:
+            return '(' + '\033[1;92m#\033[m' * 13 + '-' * 7 + ')'
+            
+        elif p.health < (p.max_health * 65 ) / 100 and p.health >= (p.max_health * 60 ) / 100:
+            return '(' + '\033[1;93m#\033[m' * 12 + '-' * 8 + ')'
+
+        elif p.health < (p.max_health * 60 ) / 100 and p.health >= (p.max_health * 55 ) / 100:
+            return '(' + '\033[1;93m#\033[m' * 11 + '-' * 9 + ')'
+
+        elif p.health < (p.max_health * 55 ) / 100 and p.health >= (p.max_health * 50 ) / 100:
+            return '(' + '\033[1;93m#\033[m' * 10 + '-' * 10 + ')'
+    
+        elif p.health < (p.max_health * 50 ) / 100 and p.health >= (p.max_health * 45 ) / 100:
+            return '(' + '\033[1;93m#\033[m' * 9 + '-' * 11 + ')'
+    
+        elif p.health < (p.max_health * 45 ) / 100 and p.health >= (p.max_health * 40 ) / 100:
+            return '(' + '\033[1;93m#\033[m' * 8 + '-' * 12 + ')'
+    
+        elif p.health < (p.max_health * 40 ) / 100 and p.health >= (p.max_health * 35 ) / 100:
+            return '(' + '\033[1;93m#\033[m' * 7 + '-' * 13 + ')'
+    
+        elif p.health < (p.max_health * 35 ) / 100 and p.health >= (p.max_health * 30 ) / 100:
+            return '(' + '\033[1;93m#\033[m' * 6 + '-' * 14 + ')'
+    
+        elif p.health < (p.max_health * 30 ) / 100 and p.health >= (p.max_health * 25 ) / 100:
+            return '(' + '\033[1;91m#\033[m' * 5 + '-' * 15 + ')'
+    
+        elif p.health < (p.max_health * 25 ) / 100 and p.health >= (p.max_health * 20 ) / 100:
+            return '(' + '\033[1;91m#\033[m' * 4 + '-' * 16 + ')'
+    
+        elif p.health < (p.max_health * 20 ) / 100 and p.health >= (p.max_health * 15 ) / 100:
+            return '(' + '\033[1;91m#\033[m' * 3 + '-' * 17 + ')'
+    
+        elif p.health < (p.max_health * 15 ) / 100 and p.health >= (p.max_health * 10 ) / 100:
+            return '(' + '\033[1;91m#\033[m' * 2 + '-' * 18 + ')'
+    
+        elif p.health < (p.max_health * 10 ) / 100 and p.health >= (p.max_health * 5 ) / 100:
+            return '(' + '\033[1;91m#\033[m' * 1 + '-' * 19 + ')'
+    
+        elif p.health < (p.max_health * 5 ) / 100 and p.health > (p.max_health * 0 ) / 100:
+            return '(' + '\033[1;91m#\033[m' * 1 + '-' * 20 + ')'
+    
+    else:
+        return '(' + '\033[1;91m-\033[m' * 20 +')'
 
 
-def xp_bar(pokemon):
+def xp_bar(p):
+    if p.xp > 0:
+        if p.xp == p.max_xp:
+            return '(' + '\033[1;94m#\033[m' * 20 + ')'
 
-    xp_dashes = 20  # Max Displayed dashes
+        elif p.xp < p.max_xp and p.xp >= (p.max_xp * 95 ) / 100:
+            return '(' + '\033[1;94m#\033[m' * 19 + '-)'
 
-    dash_convert = int(pokemon.max_xp/xp_dashes)                    # Get the number to divide by to convert health to dashes (being 10)
-    current_dashes = int(pokemon.xp/dash_convert)                   # Convert health to dash count: 80/10 => 8 dashes
-    remaining_xp = xp_dashes - current_dashes                       # Get the health remaining to fill as space => 12 spaces
+        elif p.xp < (p.max_xp * 95 ) / 100 and p.xp >= (p.max_xp * 90 ) / 100:
+            return '(' + '\033[1;94m#\033[m' * 18 + '-' * 2 + ')'
 
-    health_display = '\033[1;34m*\033[m' * current_dashes           # Convert 8 to 8 dashes as a string:   "--------"
-    remaining_display = '-' * remaining_xp                          # Convert 12 to 12 spaces as a string: "            "
+        elif p.xp < (p.max_xp * 90 ) / 100 and p.xp >= (p.max_xp * 85 ) / 100:
+            return '(' + '\033[1;94m#\033[m' * 17 + '-' * 3 + ')'
 
-    return "(" + health_display + remaining_display + ")"           # Print out textbased healthbar
+        elif p.xp < (p.max_xp * 85 ) / 100 and p.xp >= (p.max_xp * 80 ) / 100:
+            return '(' + '\033[1;94m#\033[m' * 16 + '-' * 4 + ')'
+
+        elif p.xp < (p.max_xp * 80 ) / 100 and p.xp >= (p.max_xp * 75 ) / 100:
+            return '(' + '\033[1;94m#\033[m' * 15 + '-' * 5 + ')'
+
+        elif p.xp < (p.max_xp * 75 ) / 100 and p.xp >= (p.max_xp * 70 ) / 100:
+            return '(' + '\033[1;94m#\033[m' * 14 + '-' * 6 + ')'
+
+        elif p.xp < (p.max_xp * 70 ) / 100 and p.xp >= (p.max_xp * 65 ) / 100:
+            return '(' + '\033[1;94m#\033[m' * 13 + '-' * 7 + ')'
+            
+        elif p.xp < (p.max_xp * 65 ) / 100 and p.xp >= (p.max_xp * 60 ) / 100:
+            return '(' + '\033[1;94m#\033[m' * 12 + '-' * 8 + ')'
+
+        elif p.xp < (p.max_xp * 60 ) / 100 and p.xp >= (p.max_xp * 55 ) / 100:
+            return '(' + '\033[1;94m#\033[m' * 11 + '-' * 9 + ')'
+
+        elif p.xp < (p.max_xp * 55 ) / 100 and p.xp >= (p.max_xp * 50 ) / 100:
+            return '(' + '\033[1;94m#\033[m' * 10 + '-' * 10 + ')'
+    
+        elif p.xp < (p.max_xp * 50 ) / 100 and p.xp >= (p.max_xp * 45 ) / 100:
+            return '(' + '\033[1;94m#\033[m' * 9 + '-' * 11 + ')'
+    
+        elif p.xp < (p.max_xp * 45 ) / 100 and p.xp >= (p.max_xp * 40 ) / 100:
+            return '(' + '\033[1;94m#\033[m' * 8 + '-' * 12 + ')'
+
+        elif p.xp < (p.max_xp * 40 ) / 100 and p.xp >= (p.max_xp * 35 ) / 100:
+            return '(' + '\033[1;94m#\033[m' * 7 + '-' * 13 + ')'
+    
+        elif p.xp < (p.max_xp * 35 ) / 100 and p.xp >= (p.max_xp * 30 ) / 100:
+            return '(' + '\033[1;94m#\033[m' * 6 + '-' * 14 + ')'
+    
+        elif p.xp < (p.max_xp * 30 ) / 100 and p.xp >= (p.max_xp * 25 ) / 100:
+            return '(' + '\033[1;94m#\033[m' * 5 + '-' * 15 + ')'
+    
+        elif p.xp < (p.max_xp * 25 ) / 100 and p.xp >= (p.max_xp * 20 ) / 100:
+            return '(' + '\033[1;94m#\033[m' * 4 + '-' * 16 + ')'
+    
+        elif p.xp < (p.max_xp * 20 ) / 100 and p.xp >= (p.max_xp * 15 ) / 100:
+            return '(' + '\033[1;94m#\033[m' * 3 + '-' * 17 + ')'
+    
+        elif p.xp < (p.max_xp * 15 ) / 100 and p.xp >= (p.max_xp * 10 ) / 100:
+            return '(' + '\033[1;94m#\033[m' * 2 + '-' * 18 + ')'
+    
+        elif p.xp < (p.max_xp * 10 ) / 100 and p.xp >= (p.max_xp * 5 ) / 100:
+            return '(' + '\033[1;94m#\033[m' * 1 + '-' * 19 + ')'
+    
+        elif p.xp < (p.max_xp * 5 ) / 100 and p.xp > (p.max_xp * 0 ) / 100:
+            return '(' + '\033[1;94m#\033[m' * 1 + '-' * 20 + ')'
+    
+    else:
+        return '(' + '\033[1;94m-\033[m' * 20 +')'
+

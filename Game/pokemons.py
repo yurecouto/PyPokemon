@@ -1,4 +1,7 @@
 from classes import *
+from random import randint
+from game_functions import *
+
 '''P'''
 '''O'''
 '''K'''
@@ -185,17 +188,9 @@ Dratini     = Dragon('Dratini')
 Dragonair   = Dragon('Dragonair')
 Dragonite   = Dragon('Dragonite')
 
-dragon_type = [
-    Dratini, Dragonair, Dragonite
-    ]
-
 # Fairy
 Clefairy    = Fairy('Clefairy')
 Clefable    = Fairy('Clefairy')
-
-fairy_type = [
-    Clefable, Clefairy
-    ]
 
 '''A'''
 '''R'''
@@ -205,61 +200,76 @@ fairy_type = [
 
 object_forest = [
     Pikachu, Caterpie, Butterfree, Bellsprout, Exeggcute, 
-    Pidgey, Oddish, Gloom, Clefairy, Beedrill, Weedle, Kakuna, Weepinbell,
-    Abra, Kadabra
+    Pidgey, Oddish, Gloom, Beedrill, Weedle, Kakuna, 
+    Weepinbell, Abra
     ]
+
+area_level(object_forest, 3, 8)
 
 object_mount = [
-    Zubat, Geodude, Paras, Clefairy, Mankey, Rattata, Raticate,
+    Paras, Clefairy, Mankey, Rattata, Raticate,
     Spearow, Doduo, Jigglypuff, Wigglytuff, Farfetchd, 
+    Pidgeotto, Primeape, Metapod, Clefable
     ]
+
+area_level(object_forest, 3, 8)
 
 object_cave = [
-    Arbok, Raichu, Golbat, Parasect, Venomoth, Kadabra, 
-    Magneton, Dodrio, Hypno, Ditto, Voltorb, 
+    Arbok, Golbat, Parasect, Venomoth, Kadabra, Drowzee,
+    Magneton, Dodrio, Ditto, Voltorb, Koffing, Kabuto, 
+    Grimer, Magnemite
     ]
+
+area_level(object_forest, 3, 8)
 
 object_tunnel = [
-    Zubat, Geodude, Machop, Onix, Diglett, Dugtrio, Machoke,
-    Electrode, Omanyte, Omastar, Sandshrew, Sandslash
+    Zubat, Machop, Diglett, Dugtrio, Machoke, Golem,
+    Electrode, Omanyte, Omastar, Sandshrew, Sandslash, Muk
     ]
+
+area_level(object_forest, 3, 8)
 
 object_safari = [
-    Nidorano, Nidorina, Nidoran, Nidorino, Venonat, Rhyhorn,
-	Chansey, Tangela, Scyther, Pinsir, Magikarp, Poliwag, 
-    Goldeen, Psyduck, Slowpoke, Krabby, Dratini, Cubone, Marowak, 
-    Kangaskhan, Kingler
+    Nidorano, Nidorina, Nidoran, Nidorino, Venonat,	Chansey,
+    Tangela, Pinsir, Magikarp, Kingler, Slowpoke,
+    Dratini, Cubone, Kangaskhan, Ekans    
     ]
+
+area_level(object_forest, 3, 8)
 
 object_islands = [
-    Zubat, Golbat, Psyduck, Golduck, Slowbro, Slowpoke, Seel, 
+    Psyduck, Golduck, Slowbro, Seel, Goldeen,
     Shellder, Horsea, Staryu, Krabby, Tentacool, Tentacruel,
-    Poliwag, Dewgong, Poliwhirl, Seadra, 
+    Poliwag, Dewgong, Poliwhirl, Seadra, Lickitung
     ]
 
+area_level(object_forest, 3, 8)
+
 object_road = [
-    Zubat, Golbat, Machop, Machoke, Geodude, Graveler, Onix,
-    Marowak, Rhyhorn, Tauros, Snorlax, Meowth, Persian, Haunter, 
-    Vileplume, Cloyster, Seaking, 
+    Geodude, Graveler, Onix, Bulbasaur, Poliwrath,
+    Marowak, Tauros, Meowth, Persian, Haunter, Squirtle,
+    Vileplume, Cloyster, Seaking, Mime, Charmander, Nidoking
     ]
+
+area_level(object_forest, 3, 8)
 
 object_trees = [
     Charmeleon, Charizard, Ivysaur, Venusaur, Wartortle, Blastoise,
     Vulpix, Growlithe, Ponyta, Magmar, Flareon, Gyarados, Exeggutor,
-    Vaporeon, Flareon, Jolteon
+    Vaporeon, Flareon, Jolteon, Weezing, Kabutops, Rhyhorn, Nidoqueen
     ]
+
+area_level(object_forest, 3, 8)
 
 object_valley = [
     Eevee, Jynx, Gastly, Scyther, Dragonite, Pidgeot, Fearow,
     Ninetales, Arcanine, Machamp, Victreebel, Starmie, Electabuzz,
     Lapras, Aerodactyl, Rapidash, Raichu, Hitmonlee, Hitmonchamp,
-    Snorlax, Porygon, Alakazam, Hypno, Gengar
+    Snorlax, Porygon, Alakazam, Hypno, Gengar, Rhydon
     ]
+
+area_level(object_forest, 3, 8)
 
 object_center = [Articuno, Zapdos, Moltres, Mew, Mewtwo]
 
-    
-print(
-    len(object_forest) + len(object_mount) + len(object_cave) + len(object_tunnel) + len(object_safari) +
-    len(object_islands) + len(object_road) + len(object_trees) + len(object_valley) + len(object_center)
-    )
+area_level(object_forest, 3, 8)

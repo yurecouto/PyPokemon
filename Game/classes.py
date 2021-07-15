@@ -1,5 +1,7 @@
 from game_functions import damage
-from lists import get_damage
+from lists import get_damage, evolution
+from pokedex import pokedex
+from random import randint
 
 class Player:
     def __init__(self, name):
@@ -9,27 +11,44 @@ class Player:
         self.ultraballs = 0
         self.masterballs = 0
 
+    def capture(player, pokemon):
+        if player.pokeballs > 0:
+
+            probability = randint(0, 100)
+            player.pokeballs -= 1
+
+            if probability <= 33:
+                pokedex[pokemon.name] = [pokemon.type, pokemon.lvl, pokemon.xp]
+                print(pokemon.name, 'Was Captured', f'{player.pokeballs} pokeballs remaining')
+                print()
+
 
 class Pokemon:
     def __init__(self, name):
         self.name = name
-        self.xp = 0
-        self.max_xp = 100
-        self.lvl = 1
-        self.health = 20
+        self.xp         = 0
+        self.max_xp     = 50
+        self.lvl        = 1
+        self.health     = 20
         self.max_health = 20
 
+    # this function will be called after every battle 
     def level_up(self):
         if self.xp >= self.max_xp:
             self.lvl        += 1
-            self.max_xp     *= self.lvl
-            self.max_health *= 1.5
-            self.health == self.max_health
+            self.max_xp     = evolution[self.lvl][0]
+            self.max_health = evolution[self.lvl][1]
+            self.health     = evolution[self.lvl][1]
 
+    def get_xp(self, opponent):
+        xp = (opponent.lvl * opponent.health) / 5
+        self.xp += xp
+        return self.xp
+        
     def atack(self, opponent):
-        intensity = get_damage(self.type, opponent.type)
-        d1 = damage(opponent.max_health, intensity)          
-        opponent.health -= d1
+        intensity   = get_damage(self.type, opponent.type)
+        damage_1    = damage(self.max_health, intensity)          
+        opponent.health -= damage_1
         return opponent.health
             
 
