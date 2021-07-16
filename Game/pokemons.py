@@ -204,15 +204,11 @@ object_forest = [
     Weepinbell, Abra
     ]
 
-area_level(object_forest, 3, 8)
-
 object_mount = [
     Paras, Clefairy, Mankey, Rattata, Raticate,
     Spearow, Doduo, Jigglypuff, Wigglytuff, Farfetchd, 
     Pidgeotto, Primeape, Metapod, Clefable
     ]
-
-area_level(object_forest, 3, 8)
 
 object_cave = [
     Arbok, Golbat, Parasect, Venomoth, Kadabra, Drowzee,
@@ -220,14 +216,10 @@ object_cave = [
     Grimer, Magnemite
     ]
 
-area_level(object_forest, 3, 8)
-
 object_tunnel = [
     Zubat, Machop, Diglett, Dugtrio, Machoke, Golem,
     Electrode, Omanyte, Omastar, Sandshrew, Sandslash, Muk
     ]
-
-area_level(object_forest, 3, 8)
 
 object_safari = [
     Nidorano, Nidorina, Nidoran, Nidorino, Venonat,	Chansey,
@@ -235,15 +227,11 @@ object_safari = [
     Dratini, Cubone, Kangaskhan, Ekans    
     ]
 
-area_level(object_forest, 3, 8)
-
 object_islands = [
     Psyduck, Golduck, Slowbro, Seel, Goldeen,
     Shellder, Horsea, Staryu, Krabby, Tentacool, Tentacruel,
     Poliwag, Dewgong, Poliwhirl, Seadra, Lickitung
     ]
-
-area_level(object_forest, 3, 8)
 
 object_road = [
     Geodude, Graveler, Onix, Bulbasaur, Poliwrath,
@@ -251,15 +239,11 @@ object_road = [
     Vileplume, Cloyster, Seaking, Mime, Charmander, Nidoking
     ]
 
-area_level(object_forest, 3, 8)
-
 object_trees = [
     Charmeleon, Charizard, Ivysaur, Venusaur, Wartortle, Blastoise,
     Vulpix, Growlithe, Ponyta, Magmar, Flareon, Gyarados, Exeggutor,
     Vaporeon, Flareon, Jolteon, Weezing, Kabutops, Rhyhorn, Nidoqueen
     ]
-
-area_level(object_forest, 3, 8)
 
 object_valley = [
     Eevee, Jynx, Gastly, Scyther, Dragonite, Pidgeot, Fearow,
@@ -268,8 +252,10 @@ object_valley = [
     Snorlax, Porygon, Alakazam, Hypno, Gengar, Rhydon
     ]
 
-area_level(object_forest, 3, 8)
+object_center = [
+    Articuno, Zapdos, Moltres, Mew, Mewtwo
+    ]
 
-object_center = [Articuno, Zapdos, Moltres, Mew, Mewtwo]
-
-area_level(object_forest, 3, 8)
+ip_level(Bulbasaur, 5)
+ip_level(Charmander, 5)
+ip_level(Squirtle, 5)

@@ -40,6 +40,14 @@ def area_level(area, min_l, max_l):
         pokemon.health      = evolution[lvl][1]
         pokemon.max_xp      = evolution[lvl][0]
 
+# This function sets random levels to a single pokemon
+def p_level(pokemon, min_l, max_l):
+    lvl = randint(min_l, max_l)
+    pokemon.lvl         = lvl
+    pokemon.max_health  = evolution[lvl][1]
+    pokemon.health      = evolution[lvl][1]
+    pokemon.max_xp      = evolution[lvl][0]
+
 # This function sets a level to the initial pokemon
 def ip_level(pokemon, lvl):
     pokemon.lvl         = lvl

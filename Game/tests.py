@@ -3,33 +3,9 @@ from game_functions         import *
 from classes                import *
 from pokemons               import *
 from lists                  import *
-from random                 import choice
+from random                 import choice, sample
 
-
-p2 = object_forest[1]
-main_interface(Charmander, p2)
-Charmander.xp += 20
-Charmander.level_up()
-print(Charmander.xp)
-print(Charmander.lvl)
-
-p2 = object_forest[1]
-main_interface(Charmander, p2)
-Charmander.xp += 20
-Charmander.level_up()
-print(Charmander.xp)
-print(Charmander.lvl)
-
-p2 = object_forest[1]
-main_interface(Charmander, p2)
-Charmander.xp += 20
-Charmander.level_up()
-print(Charmander.xp)
-print(Charmander.lvl)
-
-main_interface(Charmander, p2)
-
-
-
-
+for p in range(0, len(object_forest)):
+    sorteados = sample(object_forest, 4)
+    print(sorteados)
 
