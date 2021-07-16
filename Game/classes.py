@@ -39,11 +39,6 @@ class Pokemon:
             self.max_xp     = evolution[self.lvl][0]
             self.max_health = evolution[self.lvl][1]
             self.health     = evolution[self.lvl][1]
-
-    def get_xp(self, opponent):
-        xp = int((opponent.lvl * opponent.health) / 5)
-        self.xp += xp
-        return self.xp
         
     def atack(self, opponent):
         intensity   = get_damage(self.type, opponent.type)

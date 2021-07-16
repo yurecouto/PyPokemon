@@ -114,6 +114,9 @@ def main_interface(p1, p2):
     print(f'| XP.......................{xp_bar(p1)}||'
           f' XP.......................{xp_bar(p2)}|')
 
+    print(f'| Level....................................(#{p1.lvl:^3})||'
+          f' Level....................................(#{p2.lvl:^3})|')
+
     print('*' * 100)
     print()
 
@@ -146,11 +149,4 @@ def xp_bar(p):
     xp_dashes = int((p.xp * 20) / p.max_xp)
     xp_remaining = 20 - xp_dashes
 
-    if xp_dashes <= 20 and xp_dashes >= 13:
-        return '(' + '\033[1;94m#\033[m' * xp_dashes + '\033[1;94m-\033[m' * xp_remaining + ')'
-
-    elif xp_dashes < 13 and xp_dashes >= 6:
-        return '(' + '\033[1;94m#\033[m' * xp_dashes + '\033[1;94m-\033[m' * xp_remaining + ')'
-
-    elif xp_dashes < 6 and xp_dashes >= 0:
-        return '(' + '\033[1;94m#\033[m' * xp_dashes + '\033[1;94m-\033[m' * xp_remaining + ')'
+    return '(' + '\033[1;94m#\033[m' * xp_dashes + '\033[1;94m-\033[m' * xp_remaining + ')'

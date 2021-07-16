@@ -48,6 +48,7 @@ while True:
                 p2 = choice(object_forest)
 
                 while True:
+                    p1.level_up()
                     main_interface(p1, p2)
 
                     action = int(input('>>> '))
@@ -61,15 +62,14 @@ while True:
 
                     elif action == 3:
                         pass
-                        
-                    p2.atack(p1)
-                    action_status(f'{p2.name} Atacked {p1.name}')
 
                     if p2.health <= 0:
                         break
-                    
-                p1.get_xp(p2)
-                p1.level_up()
+                                            
+                    p2.atack(p1)
+                    action_status(f'{p2.name} Atacked {p1.name}')
+
+                p1.xp += 20 
                 area_0 -= 1        
                     
                 
