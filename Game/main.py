@@ -20,7 +20,7 @@ while True:
         initial_pokemon = input('>>> ')
 
         while initial_pokemon.upper() in 'BULBASAUR CHARMANDER SQUIRTLE':       # >>> Do some tratative in typing errors <<<
-            if initial_pokemon.upper() == 'CHARMANDER':
+            if initial_pokemon.upper()   == 'CHARMANDER':
                 p1 = Charmander
             elif initial_pokemon.upper() == 'BULBASAUR':
                 p1 = Bulbasaur
@@ -28,14 +28,6 @@ while True:
                 p1 = Squirtle
 
             add(p1)
-            p1.xp += 55
-            p1.level_up()  
-
-            p1.xp += 80
-            p1.level_up()   
-
-            p1.xp += 120
-            p1.level_up()
 
             explaination_1()
             player.pokeballs = 20
@@ -56,7 +48,6 @@ while True:
                 p2 = choice(object_forest)
 
                 while True:
-                    game_interface(p1)
                     main_interface(p1, p2)
 
                     action = int(input('>>> '))
@@ -75,9 +66,10 @@ while True:
                     action_status(f'{p2.name} Atacked {p1.name}')
 
                     if p2.health <= 0:
-                        p1.get_xp(p2)
                         break
-
+                    
+                p1.get_xp(p2)
+                p1.level_up()
                 area_0 -= 1        
                     
                 

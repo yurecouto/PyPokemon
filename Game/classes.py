@@ -41,7 +41,7 @@ class Pokemon:
             self.health     = evolution[self.lvl][1]
 
     def get_xp(self, opponent):
-        xp = (opponent.lvl * opponent.health) / 5
+        xp = int((opponent.lvl * opponent.health) / 5)
         self.xp += xp
         return self.xp
         

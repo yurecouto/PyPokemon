@@ -2,20 +2,55 @@ from structure_functions    import *
 from game_functions         import *
 from classes                import *
 from pokemons               import *
+from lists                  import *
+from random                 import choice
 
-p1 = Charizard
+Charmander
+p2 = object_forest[1]
+main_interface(Charmander, p2)
+Charmander.get_xp(p2)
+Charmander.level_up()
+print(Charmander.xp)
+print(Charmander.lvl)
 
-p1.xp += 55
-p1.level_up()  
+p2 = object_forest[2]
+main_interface(Charmander, p2)
+Charmander.get_xp(p2)
+Charmander.level_up()
+print(Charmander.xp)
+print(Charmander.lvl)
 
-p1.xp += 80
-p1.level_up()   
+p2 = object_forest[3]
+main_interface(Charmander, p2)
+Charmander.get_xp(p2)
+Charmander.level_up()
+print(Charmander.xp)
+print(Charmander.lvl)
 
-p1.xp += 120
-p1.level_up()
+p2 = object_forest[4]
+main_interface(Charmander, p2)
+Charmander.get_xp(p2)
+Charmander.level_up()
+print(Charmander.xp)
+print(Charmander.lvl)
 
-print(p1.xp)
-print(p1.max_xp)
-print(p1.health)
-print(p1.max_health)
-print(p1.lvl)
+p2 = object_forest[5]
+main_interface(Charmander, p2)
+Charmander.get_xp(p2)
+Charmander.level_up()
+print(Charmander.xp)
+print(Charmander.lvl)
+
+p2 = object_forest[6]
+main_interface(Charmander, p2)
+Charmander.get_xp(p2)
+Charmander.level_up()
+print(Charmander.xp)
+print(Charmander.lvl)
+
+p2 = object_forest[7]
+main_interface(Charmander, p2)
+Charmander.get_xp(p2)
+Charmander.level_up()
+print(Charmander.xp)
+print(Charmander.lvl)
