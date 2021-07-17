@@ -1,4 +1,5 @@
 from classes import *
+from random import randint
 from game_functions import *
 
 '''P'''

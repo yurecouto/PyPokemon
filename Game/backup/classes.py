@@ -54,8 +54,9 @@ class Pokemon:
             
 
 class Normal(Pokemon):
-    def __init__(self, name):
+    def __init__(self, name, number):
         super().__init__(name)
+        self.number = number
         self.name = f'\033[1;37m{name}\033[m'
         self.type = 'normal'
 
