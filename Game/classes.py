@@ -1,4 +1,4 @@
-from game_functions import damage
+from game_functions import damage, add
 from lists import get_damage, evolution
 from pokedex import pokedex
 from random import randint
@@ -17,15 +17,21 @@ class Player:
             probability = randint(0, 100)
             player.pokeballs -= 1
 
-            if probability <= 33:
-                pokedex[pokemon.name] = [pokemon.type, pokemon.lvl, pokemon.xp]
+            if probability <= 65:
+                add(pokemon)
                 print(pokemon.name, 'Was Captured', f'{player.pokeballs} pokeballs remaining')
-                print()
+            
+            else:
+                print(pokemon.name, 'Was not Captured', f'{player.pokeballs} pokeballs remaining')
+
+        else:
+            print(f"{player.name.upper()}, You don't have enough Pokeballs")
 
 
 class Pokemon:
     def __init__(self, name):
-        self.name = name
+        self.name       = name
+        self.name_l     = name
         self.xp         = 0
         self.max_xp     = 50
         self.lvl        = 1
@@ -52,6 +58,7 @@ class Normal(Pokemon):
         super().__init__(name)
         self.name = f'\033[1;37m{name}\033[m'
         self.type = 'normal'
+
 
 
 class Fire(Pokemon):

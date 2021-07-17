@@ -11,25 +11,8 @@ def damage(base, intensity):
 
 # This function adds a pokemon without resistance to the pokedex (a dictionary)   
 def add(pokemon):
-    pokedex[pokemon.name] = [pokemon.type, pokemon.lvl, pokemon.xp]
+    pokedex[pokemon] = {'type' : pokemon.type, 'level' : pokemon.lvl, 'XP' : pokemon.xp, 'HP': pokemon.max_health}
     print(pokemon.name, 'Was Added to your Pokedex')
-
-# This function adds a pokemon with resistance to the pokedex (a dictionary)  
-def capture(player, pokemon):
-    if player.pokeballs > 0:
-
-        probability = randint(0, 100)
-        player.pokeballs -= 1
-
-        if probability <= 33:
-            pokedex[pokemon.name] = [pokemon.type, pokemon.lvl, pokemon.xp]
-            print(pokemon.name, 'Was Captured', f'{player.pokeballs} pokeballs remaining')
-        
-        else:
-            print(pokemon.name, 'Was not Captured', f'{player.pokeballs} pokeballs remaining')
-
-    else:
-        print(f"{player.name}, you don't have enough Pokeballs")
 
 # This function sets random levels to the pokemons in the areas
 def area_level(area, min_l, max_l):

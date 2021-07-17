@@ -5,7 +5,15 @@ from pokemons               import *
 from lists                  import *
 from random                 import choice, sample
 
-for p in range(0, len(object_forest)):
-    sorteados = sample(object_forest, 4)
-    print(sorteados)
+for p in object_forest:
+    add(p)
 
+# Where p = pokemon
+# And i = info
+
+p1 = Charizard
+
+pokedex_explaination()
+
+for p in v_pokedex:
+    print(p)

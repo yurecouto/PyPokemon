@@ -1,4 +1,4 @@
-from time import perf_counter
+from pokedex import pokedex
 
 def title():
     print()
@@ -75,6 +75,17 @@ def area_explaination(area):
     print()
 
 
+def pokedex_explaination():
+    print()
+    print('*' * 100)
+    print('|', ' ' * 96, '|')
+    print(f'|{"This is toyr pokedex":^98}|')    
+    print(f'|{"Type the correct Name of the pokemon you wanna use":^98}|')    
+    print('|', ' ' * 96, '|')
+    print('*' * 100)
+    print()
+
+
 def initial_menu(ip1, ip2, ip3):
     print()
     print('*' * 100)
@@ -89,22 +100,23 @@ def initial_menu(ip1, ip2, ip3):
 
 def main_interface(p1, p2):
     print()
-    atack = '\033[1;91mATACK\033[m'
+    atack   = '\033[1;91mATACK\033[m'
     capture = '\033[1;92mCAPTURE\033[m'
-    bag = '\033[1;93mBAG\033[m'
+    change  = '\033[1;94mCHANGE POKEMON\033[m'
+    bag     = '\033[1;93mBAG\033[m'
 
     print('*' * 100)
     print(f'|{"Options":^98}|')
-    print('-' * 100)
+    print('+' + '-' * 98 + '+')
 
     print(f"|{f'My Pokemon: {p1.name}!':^108}|")
 
     print(f'|{" " * 98}|')
-    print(f"|{f'Press 1 for {atack} | 2 to try to {capture} | 3 to see your {bag}':^128}|")
+    print(f"|{f'Press 1 for {atack} | 2 to try to {capture} || 3 to {change} | 4 to see your {bag}':^138}|")
 
-    print('-' * 100)
+    print('+' + '-' * 98 + '+')
     print(f'|{p1.name:^58}||{p2.name:^58}|')
-    print('-' * 100)
+    print('+' + '-' * 98 + '+')
 
     print(f'|{"Status":^48}||{"Status":^48}|')
 
@@ -150,3 +162,37 @@ def xp_bar(p):
     xp_remaining = 20 - xp_dashes
 
     return '(' + '\033[1;94m#\033[m' * xp_dashes + '\033[1;94m-\033[m' * xp_remaining + ')'
+
+
+def game_over():
+    print('                                                                ')
+    print('             /██████                                            ')
+    print('            /██__  ██                                           ')
+    print('           | ██  \__/  /██████  /██████/████   /██████          ')
+    print('           | ██ /████ |____  ██| ██_  ██_  ██ /██__  ██         ')
+    print('           | ██|_  ██  /███████| ██ \ ██ \ ██| ████████         ')
+    print('           | ██  \ ██ /██__  ██| ██ | ██ | ██| ██_____/         ')
+    print('           |  ██████/|  ███████| ██ | ██ | ██|  ████████        ')
+    print('            \______/  \_______/|__/ |__/ |__/ \_______/         ')
+    print('                                                                ')
+    print('             /██████  /██    /██ /██████   /██████              ')
+    print('            /██__  ██|  ██  /██//██__  ██ /██__  ██             ')
+    print('           | ██  \ ██ \  ██/██/| ████████| ██  \__/             ')
+    print('           | ██  | ██  \  ███/ | ██_____/| ██                   ')
+    print('           |  ██████/   \  █/  |  ███████| ██                   ')
+    print('            \______/     \_/    \_______/|__/                   ')
+    print('                                                                ')
+
+
+def my_pokedex():
+    for p, i in pokedex.items():
+        print('-------------------') 
+        print(f'|{p.name:^27}|')
+        print('-------------------') 
+
+        for keys, values in i.items():
+            print(f'|{keys:<6}: {values:>9}|')
+
+        print('-------------------')
+
+

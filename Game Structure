@@ -14,13 +14,22 @@
 		- Pokedex explanation
 		- Add 20 Pokeballs on the bag
 
-	* Create an area to clear:
+	- Create an area to clear:
 		- Use a list for Separate each area pokemons
 		- Use a len as a logical test
 		- Create a function to define the medium area pokemon level 
-		* Create a function to give XP for the p1
-	
+		- Create a function to give XP for the p1
+
+		* Improve the capture mechanic
+			- Add the wild pokemon in pokedex
+			- Create a list with all the pokemons in pokedex
+			- pokedex explaination
+			* Change the p1 when necessary
+			
+
+			* Create items
+				* item to improve atack
+				* health potions
+				* evolutions rocks
 	
 ================= To Do List =================
-
-

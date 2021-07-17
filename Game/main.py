@@ -1,10 +1,9 @@
-from hashlib import pbkdf2_hmac
-from random import choice, randint
-from classes import *
-from game_functions import *
-from structure_functions import *
-from pokedex import pokedex
-from pokemons import *
+from random                 import choice, randint
+from classes                import *
+from game_functions         import *
+from structure_functions    import *
+from pokedex                import pokedex
+from pokemons               import *
                                                           
 while True:
     title()                                                 # Title function box
@@ -65,6 +64,16 @@ while True:
                         player.capture(p2)
 
                     elif action == 3:
+                        my_pokedex()
+                        pokedex_explaination()
+
+                        change = input('>>>')
+
+                        for p in v_pokedex:
+                            if change.upper() == p:
+                                pass
+                            
+                    elif action == 4:
                         pass
                                             
                     p2.atack(p1)
