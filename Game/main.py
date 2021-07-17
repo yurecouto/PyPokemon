@@ -70,7 +70,7 @@ while True:
                         change = int(input('>>>'))
 
                         for 1 in range():
-                            if change.upper():
+                            if change:
                                 pass
                             
                     elif action == 4:

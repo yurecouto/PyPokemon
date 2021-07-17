@@ -164,7 +164,7 @@ Parasect    = Bug('Parasect', 47)
 Venonat     = Bug('Venonat', 48)   
 Venomoth    = Bug('Venomoth', 49)
 Scyther     = Bug('Scyther', 123)
-Pinsir      = Bug('Pinsir'), 127
+Pinsir      = Bug('Pinsir', 127)
 
 # Rock
 Geodude     = Rock('Geodude', 74)
