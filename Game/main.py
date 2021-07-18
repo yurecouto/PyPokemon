@@ -63,15 +63,24 @@ while True:
                     elif action == 2:
                         player.capture(p2)
 
+                        if player.capture == 'yes':
+                            break
+
                     elif action == 3:
                         my_pokedex()
                         pokedex_explaination()
 
-                        change = int(input('>>>'))
+                        p_number = int(input('>>> '))
 
-                        for 1 in range():
-                            if change:
-                                pass
+                        pokedex_check(p_number)
+                        if pokedex_check(p_number) == 'yes':
+                            def test(p_number):
+                                global p1
+                                for pokemon, info in pokedex.items():
+                                    for key, value in info.items():
+                                        if key == 'number' and value == p_number:
+                                            p1 = pokemon
+                                            return p1
                             
                     elif action == 4:
                         pass

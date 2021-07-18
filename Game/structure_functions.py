@@ -79,7 +79,7 @@ def pokedex_explaination():
     print()
     print('*' * 100)
     print('|', ' ' * 96, '|')
-    print(f'|{"This is toyr pokedex":^98}|')    
+    print(f'|{"This is your pokedex":^98}|')    
     print(f'|{"Type the correct Number of the pokemon you wanna use":^98}|')    
     print('|', ' ' * 96, '|')
     print('*' * 100)

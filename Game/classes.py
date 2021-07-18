@@ -20,12 +20,15 @@ class Player:
             if probability <= 65:
                 add(pokemon)
                 print(pokemon.name, 'Was Captured', f'{player.pokeballs} pokeballs remaining')
+                return 'yes'
             
             else:
                 print(pokemon.name, 'Was not Captured', f'{player.pokeballs} pokeballs remaining')
+                return 'no' 
 
         else:
             print(f"{player.name.upper()}, You don't have enough Pokeballs")
+            return 'no' 
 
 
 class Pokemon:

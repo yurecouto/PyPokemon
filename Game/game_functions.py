@@ -37,3 +37,26 @@ def ip_level(pokemon, lvl):
     pokemon.max_health  = evolution[lvl][1]
     pokemon.health      = evolution[lvl][1]
     pokemon.max_xp      = evolution[lvl][0]
+
+# This function checks if you have the pokemon on your pokedex
+def pokedex_check(p_number):
+    for pokemon, info in pokedex.items():
+        for key, value in info.items():
+            if key == 'number' and value == p_number:
+                return 'yes'
+
+            else:
+                return 'no'
+
+# This function returns the pokemon checked
+def pokemon_change(p_number):
+    for pokemon, info in pokedex.items():
+        for key, value in info.items():
+            if key == 'number' and value == p_number:
+                return pokemon
+
+# Thats the correct way to use the 2 functions above
+'''pokedex_check(number)
+if pokedex_check(number) == 'yes':
+    p1 = pokemon_change(number)'''
+

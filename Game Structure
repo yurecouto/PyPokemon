@@ -20,11 +20,11 @@
 		- Create a function to define the medium area pokemon level 
 		- Create a function to give XP for the p1
 
-		* Improve the capture mechanic
+		- Improve the capture mechanic
 			- Add the wild pokemon in pokedex
 			- Create a list with all the pokemons in pokedex
 			- pokedex explaination
-			* Change the p1 when necessary
+			- Change the p1 when necessary
 			
 
 			* Create items
