@@ -3,35 +3,22 @@ from game_functions         import *
 from classes                import *
 from pokemons               import *
 from lists                  import *
+from random import choice
 
-p1 = Charmander
+
+add(Meowth)
+add(Squirtle)
+add(Bulbasaur)
+add(Nidoking)
+add(Charmander)
+add(Mew)
+
+p1 = Charizard
 print(p1.name)
 
-add(Abra)
-add(Bulbasaur)
+n = int(input('>>> '))
 
-number = int(input('>>> '))
-
-# testar essas duas funcções como uma, caso não funcione
-# mover para o arquivo game_functions
-
-def pokedex_check(p_number):
-    for pokemon, info in pokedex.items():
-        for key, value in info.items():
-            if key == 'number' and value == p_number:
-                return 'yes'
-
-            else:
-                return 'no'
-
-def pokemon_change(p_number):
-    for pokemon, info in pokedex.items():
-        for key, value in info.items():
-            if key == 'number' and value == p_number:
-                return pokemon
-
-pokedex_check(number)
-if pokedex_check(number) == 'yes':
-    p1 = pokemon_change(number)
+if pokedex_check(n) == True:
+    p1 = pokemon_change(n)
 
 print(p1.name)

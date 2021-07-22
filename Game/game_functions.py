@@ -10,29 +10,14 @@ def damage(base, intensity):
     return atack
 
 # This function adds a pokemon without resistance to the pokedex (a dictionary)   
+'''Use pokemon.number as key value'''
 def add(pokemon):
     pokedex[pokemon] = {'number' : pokemon.number, 'type' : pokemon.type, 'level' : pokemon.lvl, 'xp' : pokemon.xp, 'hp': pokemon.max_health}
     print(pokemon.name, 'Was Added to your Pokedex')
 
-# This function sets random levels to the pokemons in the areas
-def area_level(area, min_l, max_l):
-    for pokemon in area:
-        lvl = randint(min_l, max_l)
-        pokemon.lvl         = lvl
-        pokemon.max_health  = evolution[lvl][1]
-        pokemon.health      = evolution[lvl][1]
-        pokemon.max_xp      = evolution[lvl][0]
-
-# This function sets random levels to a single pokemon
-def p_level(pokemon, min_l, max_l):
-    lvl = randint(min_l, max_l)
-    pokemon.lvl         = lvl
-    pokemon.max_health  = evolution[lvl][1]
-    pokemon.health      = evolution[lvl][1]
-    pokemon.max_xp      = evolution[lvl][0]
 
 # This function sets a level to the initial pokemon
-def ip_level(pokemon, lvl):
+def initial_level(pokemon, lvl):
     pokemon.lvl         = lvl
     pokemon.max_health  = evolution[lvl][1]
     pokemon.health      = evolution[lvl][1]
@@ -41,19 +26,17 @@ def ip_level(pokemon, lvl):
 # This function checks if you have the pokemon on your pokedex
 def pokedex_check(p_number):
     for pokemon, info in pokedex.items():
-        for key, value in info.items():
-            if key == 'number' and value == p_number:
-                return 'yes'
+        if info['number'] == p_number:
+            return True
 
-            else:
-                return 'no'
+    return False
 
 # This function returns the pokemon checked
 def pokemon_change(p_number):
     for pokemon, info in pokedex.items():
-        for key, value in info.items():
-            if key == 'number' and value == p_number:
-                return pokemon
+        if info['number'] == p_number:
+            print(pokemon.name + 'Found') 
+            return pokemon
 
 # Thats the correct way to use the 2 functions above
 '''pokedex_check(number)

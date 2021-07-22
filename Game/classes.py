@@ -20,15 +20,15 @@ class Player:
             if probability <= 65:
                 add(pokemon)
                 print(pokemon.name, 'Was Captured', f'{player.pokeballs} pokeballs remaining')
-                return 'yes'
+                return True
             
             else:
                 print(pokemon.name, 'Was not Captured', f'{player.pokeballs} pokeballs remaining')
-                return 'no' 
+                return False
 
         else:
             print(f"{player.name.upper()}, You don't have enough Pokeballs")
-            return 'no' 
+            return False 
 
 
 class Pokemon:
@@ -54,6 +54,22 @@ class Pokemon:
         damage_1    = damage(self.max_health, intensity)          
         opponent.health -= damage_1
         return opponent.health
+
+    # This function sets random levels to a single pokemon
+    def set_level(self, min_l, max_l):
+        lvl = randint(min_l, max_l)
+        self.lvl         = lvl
+        self.max_health  = evolution[lvl][1]
+        self.health      = evolution[lvl][1]
+        self.max_xp      = evolution[lvl][0]
+
+    # This function sets a level to the initial pokemon
+    def initial_level(self):
+        lvl = 5
+        self.lvl         = lvl
+        self.max_health  = evolution[lvl][1]
+        self.health      = evolution[lvl][1]
+        self.max_xp      = evolution[lvl][0]
             
 
 class Normal(Pokemon):

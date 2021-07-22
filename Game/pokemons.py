@@ -255,6 +255,6 @@ object_center = [
     Articuno, Zapdos, Moltres, Mew, Mewtwo
     ]
 
-ip_level(Bulbasaur, 5)
-ip_level(Charmander, 5)
-ip_level(Squirtle, 5)
+Bulbasaur.initial_level()
+Charmander.initial_level()
+Squirtle.initial_level()
