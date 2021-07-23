@@ -156,6 +156,9 @@ def hp_bar(p):
     elif hp_dashes < 6 and hp_dashes >= 0:
         return '(' + '\033[1;91m#\033[m' * hp_dashes + '\033[1;91m-\033[m' * hp_remaining + ')'
 
+    elif hp_dashes < 0:
+        return '(' + '\033[1;91m-\033[m' * 3 + '\033[1;91mOUT-OF-COMBAT!\033[m' + '\033[1;91m-\033[m' * 3 + ')'
+
 
 def xp_bar(p):
     l = p.max_xp - p.xp

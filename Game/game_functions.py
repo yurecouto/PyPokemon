@@ -27,14 +27,17 @@ def pokedex_health_check():
     alive = len(pokedex)
 
     for pokemon, info in pokedex.items():
-        if info['hp'] <= 0:
+        if info['hp'] < 1:
             alive -= 1
-    
-    if alive == 0:
+
+    print(f'alive: {alive}')    
+
+    while alive == 0:
         return False
 
     else:
         return True
+
 
 # This function checks if you have the pokemon on your pokedex
 def pokedex_check(p_number):

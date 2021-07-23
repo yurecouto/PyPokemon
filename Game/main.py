@@ -29,7 +29,7 @@ while True:
 
             add(p1)
 
-            while pokedex_health_check() == True:
+            while True:
 
                 explaination_1()
                 player.pokeballs = 20
@@ -53,6 +53,10 @@ while True:
                     p2.set_level(3, 7)
 
                     while p2.health > 0:
+                        pokedex_health_check()    
+                        if pokedex_health_check() == False:
+                            break
+
                         pokedex_info_update(p1)
                         p1.level_up()
                         main_interface(p1, p2)
@@ -78,387 +82,24 @@ while True:
                                 
                         elif action == 4:
                             pass
-
-                        pokedex_health_check()                      
+                    
                         p2.atack(p1)
                         action_status(f'{p2.name} Atacked {p1.name}')
 
                     xp = int(p2.max_xp / 7)
                     p1.xp += xp
-                    area_0 -= 1        
- 
-                area_explaination('The Objects Mount')
+                    area_0 -= 1  
 
-                while area_1 > 0:
-                    p2 = choice(object_forest)
+                    if pokedex_health_check() == False:
+                        break
 
-                    p2.set_level(3, 7)
+                break
 
-                    while p2.health > 0:
-                        p1.level_up()
-                        main_interface(p1, p2)
-
-                        action = int(input('>>> '))
-
-                        if action == 1:
-                            p1.atack(p2)
-                            action_status(f'{p1.name} Atacked {p2.name}')            
-
-                        elif action == 2:
-                            if player.capture(p2) == True:
-                                break
-
-                        elif action == 3:
-                            my_pokedex()
-                            pokedex_explaination()
-
-                            p_number = int(input('>>> '))
-
-                            if pokedex_check(p_number) == True:
-                                p1 = pokemon_change(p_number)
-                                
-                        elif action == 4:
-                            pass
-
-                        pokedex_health_check()                        
-                        p2.atack(p1)
-                        action_status(f'{p2.name} Atacked {p1.name}')
-
-                    xp = int(p2.max_xp / 7)
-                    p1.xp += xp
-                    area_0 -= 1 
-
-                area_explaination('The Objects Cave')
-
-                while area_2 > 0:
-                    p2 = choice(object_forest)
-
-                    p2.set_level(3, 7)
-
-                    while p2.health > 0:
-                        p1.level_up()
-                        main_interface(p1, p2)
-
-                        action = int(input('>>> '))
-
-                        if action == 1:
-                            p1.atack(p2)
-                            action_status(f'{p1.name} Atacked {p2.name}')            
-
-                        elif action == 2:
-                            if player.capture(p2) == True:
-                                break
-
-                        elif action == 3:
-                            my_pokedex()
-                            pokedex_explaination()
-
-                            p_number = int(input('>>> '))
-
-                            if pokedex_check(p_number) == True:
-                                p1 = pokemon_change(p_number)
-                                
-                        elif action == 4:
-                            pass
-
-                        pokedex_health_check()           
-                        p2.atack(p1)
-                        action_status(f'{p2.name} Atacked {p1.name}')
-
-                    xp = int(p2.max_xp / 7)
-                    p1.xp += xp
-                    area_0 -= 1 
-
-                area_explaination('The Objects Tunnel')
-
-                while area_3 > 0:
-                    p2 = choice(object_forest)
-
-                    p2.set_level(3, 7)
-
-                    while p2.health > 0:
-                        p1.level_up()
-                        main_interface(p1, p2)
-
-                        action = int(input('>>> '))
-
-                        if action == 1:
-                            p1.atack(p2)
-                            action_status(f'{p1.name} Atacked {p2.name}')            
-
-                        elif action == 2:
-                            if player.capture(p2) == True:
-                                break
-
-                        elif action == 3:
-                            my_pokedex()
-                            pokedex_explaination()
-
-                            p_number = int(input('>>> '))
-
-                            if pokedex_check(p_number) == True:
-                                p1 = pokemon_change(p_number)
-                                
-                        elif action == 4:
-                            pass
-
-                        pokedex_health_check()                        
-                        p2.atack(p1)
-                        action_status(f'{p2.name} Atacked {p1.name}')
-
-                    xp = int(p2.max_xp / 7)
-                    p1.xp += xp
-                    area_0 -= 1 
-
-                area_explaination('The Objects Safari')
-
-                while area_4 > 0:
-                    p2 = choice(object_forest)
-
-                    p2.set_level(3, 7)
-
-                    while p2.health > 0:
-                        p1.level_up()
-                        main_interface(p1, p2)
-
-                        action = int(input('>>> '))
-
-                        if action == 1:
-                            p1.atack(p2)
-                            action_status(f'{p1.name} Atacked {p2.name}')            
-
-                        elif action == 2:
-                            if player.capture(p2) == True:
-                                break
-
-                        elif action == 3:
-                            my_pokedex()
-                            pokedex_explaination()
-
-                            p_number = int(input('>>> '))
-
-                            if pokedex_check(p_number) == True:
-                                p1 = pokemon_change(p_number)
-                                
-                        elif action == 4:
-                            pass
-
-                        pokedex_health_check()                        
-                        p2.atack(p1)
-                        action_status(f'{p2.name} Atacked {p1.name}')
-
-                    xp = int(p2.max_xp / 7)
-                    p1.xp += xp
-                    area_0 -= 1 
-
-                area_explaination('The Objects Islands')
-
-                while area_5 > 0:
-                    p2 = choice(object_forest)
-
-                    p2.set_level(3, 7)
-
-                    while p2.health > 0:
-                        p1.level_up()
-                        main_interface(p1, p2)
-
-                        action = int(input('>>> '))
-
-                        if action == 1:
-                            p1.atack(p2)
-                            action_status(f'{p1.name} Atacked {p2.name}')            
-
-                        elif action == 2:
-                            if player.capture(p2) == True:
-                                break
-
-                        elif action == 3:
-                            my_pokedex()
-                            pokedex_explaination()
-
-                            p_number = int(input('>>> '))
-
-                            if pokedex_check(p_number) == True:
-                                p1 = pokemon_change(p_number)
-                                
-                        elif action == 4:
-                            pass
-
-                        pokedex_health_check()                        
-                        p2.atack(p1)
-                        action_status(f'{p2.name} Atacked {p1.name}')
-
-                    xp = int(p2.max_xp / 7)
-                    p1.xp += xp
-                    area_0 -= 1 
-
-                area_explaination('The Objects Road')
-
-                while area_6 > 0:
-                    p2 = choice(object_forest)
-
-                    p2.set_level(3, 7)
-
-                    while p2.health > 0:
-                        p1.level_up()
-                        main_interface(p1, p2)
-
-                        action = int(input('>>> '))
-
-                        if action == 1:
-                            p1.atack(p2)
-                            action_status(f'{p1.name} Atacked {p2.name}')            
-
-                        elif action == 2:
-                            if player.capture(p2) == True:
-                                break
-
-                        elif action == 3:
-                            my_pokedex()
-                            pokedex_explaination()
-
-                            p_number = int(input('>>> '))
-
-                            if pokedex_check(p_number) == True:
-                                p1 = pokemon_change(p_number)
-                                
-                        elif action == 4:
-                            pass
-
-                        pokedex_health_check()                        
-                        p2.atack(p1)
-                        action_status(f'{p2.name} Atacked {p1.name}')
-
-                    xp = int(p2.max_xp / 7)
-                    p1.xp += xp
-                    area_0 -= 1 
-
-                area_explaination('The Objects Trees')
-
-                while area_7 > 0:
-                    p2 = choice(object_forest)
-
-                    p2.set_level(3, 7)
-
-                    while p2.health > 0:
-                        p1.level_up()
-                        main_interface(p1, p2)
-
-                        action = int(input('>>> '))
-
-                        if action == 1:
-                            p1.atack(p2)
-                            action_status(f'{p1.name} Atacked {p2.name}')            
-
-                        elif action == 2:
-                            if player.capture(p2) == True:
-                                break
-
-                        elif action == 3:
-                            my_pokedex()
-                            pokedex_explaination()
-
-                            p_number = int(input('>>> '))
-
-                            if pokedex_check(p_number) == True:
-                                p1 = pokemon_change(p_number)
-                                
-                        elif action == 4:
-                            pass
-
-                        pokedex_health_check()                        
-                        p2.atack(p1)
-                        action_status(f'{p2.name} Atacked {p1.name}')
-
-                    xp = int(p2.max_xp / 7)
-                    p1.xp += xp
-                    area_0 -= 1 
-
-                area_explaination('The Objects Valley')
-
-                while area_8 > 0:
-                    p2 = choice(object_forest)
-
-                    p2.set_level(3, 7)
-
-                    while p2.health > 0:
-                        p1.level_up()
-                        main_interface(p1, p2)
-
-                        action = int(input('>>> '))
-
-                        if action == 1:
-                            p1.atack(p2)
-                            action_status(f'{p1.name} Atacked {p2.name}')            
-
-                        elif action == 2:
-                            if player.capture(p2) == True:
-                                break
-
-                        elif action == 3:
-                            my_pokedex()
-                            pokedex_explaination()
-
-                            p_number = int(input('>>> '))
-
-                            if pokedex_check(p_number) == True:
-                                p1 = pokemon_change(p_number)
-                                
-                        elif action == 4:
-                            pass
-
-                        pokedex_health_check()                        
-                        p2.atack(p1)
-                        action_status(f'{p2.name} Atacked {p1.name}')
-
-                    xp = int(p2.max_xp / 7)
-                    p1.xp += xp
-                    area_0 -= 1 
-
-                area_explaination('The Objects Center')
-
-                while area_9 > 0:
-                    p2 = choice(object_forest)
-
-                    p2.set_level(3, 7)
-
-                    while p2.health > 0:
-                        p1.level_up()
-                        main_interface(p1, p2)
-
-                        action = int(input('>>> '))
-
-                        if action == 1:
-                            p1.atack(p2)
-                            action_status(f'{p1.name} Atacked {p2.name}')            
-
-                        elif action == 2:
-                            if player.capture(p2) == True:
-                                break
-
-                        elif action == 3:
-                            my_pokedex()
-                            pokedex_explaination()
-
-                            p_number = int(input('>>> '))
-
-                            if pokedex_check(p_number) == True:
-                                p1 = pokemon_change(p_number)
-                                
-                        elif action == 4:
-                            pass
-
-                        pokedex_health_check()                        
-                        p2.atack(p1)
-                        action_status(f'{p2.name} Atacked {p1.name}')
-
-                    xp = int(p2.max_xp / 7)
-                    p1.xp += xp
-                    area_0 -= 1 
-
-            game_over()
+            break
 
         break
 
     break
+  
+game_over()  
            
