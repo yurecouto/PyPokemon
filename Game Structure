@@ -25,11 +25,15 @@
 			- Create a list with all the pokemons in pokedex
 			- pokedex explaination
 			- Change the p1 when necessary
-			
 
-			* Create items
-				* item to improve atack
-				* health potions
-				* evolutions rocks
+		- pokedex health check
+			- if pokedex has at least one pokemon with more than 0 hps, the game wont break
+			
+		* Create items
+			* item to improve atack
+			* health potions
+			* evolutions rocks
 	
 ================= To Do List =================
+* use the interval between xp and max xp to make the xp bar
+* update pokedex status of the pokemons

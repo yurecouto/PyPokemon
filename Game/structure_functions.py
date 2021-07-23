@@ -158,10 +158,11 @@ def hp_bar(p):
 
 
 def xp_bar(p):
-    xp_dashes = int((p.xp * 20) / p.max_xp)
+    l = p.max_xp - p.xp
+    xp_dashes = int((l * 20) / p.max_xp)
     xp_remaining = 20 - xp_dashes
 
-    return '(' + '\033[1;94m#\033[m' * xp_dashes + '\033[1;94m-\033[m' * xp_remaining + ')'
+    return '(' + '\033[1;94m#\033[m' * xp_remaining + '\033[1;94m-\033[m' * xp_dashes + ')'
 
 
 def game_over():

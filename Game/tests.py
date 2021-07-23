@@ -5,20 +5,14 @@ from pokemons               import *
 from lists                  import *
 from random import choice
 
-
-add(Meowth)
-add(Squirtle)
-add(Bulbasaur)
-add(Nidoking)
 add(Charmander)
-add(Mew)
+add(Pikachu)
+add(Eevee)
+add(Venusaur)
 
-p1 = Charizard
-print(p1.name)
+my_pokedex()
 
-n = int(input('>>> '))
-
-if pokedex_check(n) == True:
-    p1 = pokemon_change(n)
-
-print(p1.name)
+Squirtle.atack(Charmander)
+print(Charmander.health)
+pokedex_info_update(Charmander)
+my_pokedex()
