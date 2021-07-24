@@ -58,7 +58,7 @@ def pokedex_info_update(p_object):
     for pokemon, info in pokedex.items():
         if info['number'] == p_object.number:
             if p_object.health < info['max_hp']:
-                pokedex[p_object]['hp'] = p_object.health
-                pokedex[p_object]['xp'] = p_object.xp
-                pokedex[p_object]['level'] = p_object.lvl
+                pokedex[p_object]['hp']     = p_object.health
+                pokedex[p_object]['xp']     = p_object.xp
+                pokedex[p_object]['level']  = p_object.lvl
                 return pokedex
