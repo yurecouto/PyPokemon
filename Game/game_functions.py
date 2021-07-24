@@ -38,7 +38,6 @@ def pokedex_health_check():
     else:
         return True
 
-
 # This function checks if you have the pokemon on your pokedex
 def pokedex_check(p_number):
     for pokemon, info in pokedex.items():
@@ -62,3 +61,5 @@ def pokedex_info_update(p_object):
                 pokedex[p_object]['xp']     = p_object.xp
                 pokedex[p_object]['level']  = p_object.lvl
                 return pokedex
+
+#

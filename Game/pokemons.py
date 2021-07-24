@@ -197,53 +197,62 @@ Clefable    = Fairy('Clefairy', 36)
 '''A'''
 '''S'''
 
+# P65%, G90%, U100%
 object_forest = [
     Pikachu, Caterpie, Butterfree, Bellsprout, Exeggcute, 
     Pidgey, Oddish, Gloom, Beedrill, Weedle, Kakuna, 
     Weepinbell, Abra
     ]
 
+# P60%, G80%, U95%
 object_mount = [
     Paras, Clefairy, Mankey, Rattata, Raticate,
     Spearow, Doduo, Jigglypuff, Wigglytuff, Farfetchd, 
     Pidgeotto, Primeape, Metapod, Clefable
     ]
 
+# P55%, G75%, U90%
 object_cave = [
     Arbok, Golbat, Parasect, Venomoth, Kadabra, Drowzee,
     Magneton, Dodrio, Ditto, Voltorb, Koffing, Kabuto, 
     Grimer, Magnemite
     ]
 
+# P50%, G70%, U90%
 object_tunnel = [
     Zubat, Machop, Diglett, Dugtrio, Machoke, Golem,
     Electrode, Omanyte, Omastar, Sandshrew, Sandslash, Muk
     ]
 
+# P35%, G50%, U75%
 object_safari = [
     Nidorano, Nidorina, Nidoran, Nidorino, Venonat,	Chansey,
     Tangela, Pinsir, Magikarp, Kingler, Slowpoke,
     Dratini, Cubone, Kangaskhan, Ekans    
     ]
 
+# P25%, G40%, U70%
 object_islands = [
     Psyduck, Golduck, Slowbro, Seel, Goldeen,
     Shellder, Horsea, Staryu, Krabby, Tentacool, Tentacruel,
     Poliwag, Dewgong, Poliwhirl, Seadra, Lickitung
     ]
 
+# P15%, G35%, U65%
 object_road = [
     Geodude, Graveler, Onix, Bulbasaur, Poliwrath,
     Marowak, Tauros, Meowth, Persian, Haunter, Squirtle,
     Vileplume, Cloyster, Seaking, Mime, Charmander, Nidoking
     ]
 
+# G15%, U65%, M90%
 object_trees = [
     Charmeleon, Charizard, Ivysaur, Venusaur, Wartortle, Blastoise,
     Vulpix, Growlithe, Ponyta, Magmar, Flareon, Gyarados, Exeggutor,
     Vaporeon, Flareon, Jolteon, Weezing, Kabutops, Rhyhorn, Nidoqueen
     ]
 
+# G10%, U50%, M90%
 object_valley = [
     Eevee, Jynx, Gastly, Scyther, Dragonite, Pidgeot, Fearow,
     Ninetales, Arcanine, Machamp, Victreebel, Starmie, Electabuzz,
@@ -251,6 +260,7 @@ object_valley = [
     Snorlax, Porygon, Alakazam, Hypno, Gengar, Rhydon
     ]
 
+# U35%, M75%
 object_center = [
     Articuno, Zapdos, Moltres, Mew, Mewtwo
     ]

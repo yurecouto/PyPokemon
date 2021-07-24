@@ -25,6 +25,7 @@
 			- Create a list with all the pokemons in pokedex
 			- pokedex explaination
 			- Change the p1 when necessary
+			- use diferent pokeballs to return th chance of capture in each zone
 
 		- pokedex health check
 			- if pokedex has at least one pokemon with more than 0 hps, the game wont break
@@ -36,5 +37,5 @@
 	
 ================= To Do List =================
 * use the interval between xp and max xp to make the xp bar
-* update pokedex status of the pokemons
+- update pokedex status of the pokemons
 - improve the pokedex_health_check 

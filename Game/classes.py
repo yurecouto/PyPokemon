@@ -1,34 +1,49 @@
 from game_functions import damage, add
-from lists import get_damage, evolution
+from lists import get_chance, get_damage, evolution
 from pokedex import pokedex
 from random import randint
 
 class Player:
     def __init__(self, name):
-        self.name = name
-        self.pokeballs = 0
-        self.greatballs = 0
-        self.ultraballs = 0
-        self.masterballs = 0
+        self.name           = name
 
-    def capture(player, pokemon):
-        if player.pokeballs > 0:
+        # Pokeballs
+        self.pokeballs      = 0
+        self.greatballs     = 0
+        self.ultraballs     = 0
+        self.masterballs    = 0
 
-            probability = randint(0, 100)
-            player.pokeballs -= 1
+        # Potions
+        self.potions        = 0
+        self.super_potions  = 0
+        self.hyper_potions  = 0
+        self.max_potions    = 0
+        self.xp_potions     = 0
 
-            if probability <= 65:
-                add(pokemon)
-                print(pokemon.name, 'Was Captured', f'{player.pokeballs} pokeballs remaining')
-                return True
-            
-            else:
-                print(pokemon.name, 'Was not Captured', f'{player.pokeballs} pokeballs remaining')
-                return False
+        # Evolve Stones
+        self.moon_stones    = 0
+        self.fire_stones    = 0
+        self.leaf_stones    = 0
+        self.thunder_stones = 0
+        self.sun_stones     = 0
+        self.thunder_stones = 0
+        self.water_stones   = 0
 
+    def capture(self, pokemon, area, methods):
+        probability = randint(0, 100)
+        self.methods -= 1
+
+        chance = get_chance(area, methods)
+        if probability <= chance:
+            add(pokemon)
+            print(pokemon.name, 'Was Captured', f'{self.pokeballs} pokeballs remaining')
+            return True
+        
         else:
-            print(f"{player.name.upper()}, You don't have enough Pokeballs")
-            return False 
+            print(pokemon.name, 'Was not Captured', f'{self.pokeballs} pokeballs remaining')
+            return False
+        
+        
 
 
 class Pokemon:

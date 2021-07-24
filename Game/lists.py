@@ -49,6 +49,43 @@ def get_damage(atacker, demaged):
     column   = atack_types[demaged]
     return atack_rules[row][column]
 
+capture_rules = [
+    [	65	,	90	,	100	,	100	]	,
+    [	60	,	80	,	95	,	100	]	,
+    [	55	,	75	,	90	,	100	]	,
+    [	50	,	70	,	90	,	100	]	,
+    [	35	,	50	,	75	,	100	]	,
+    [	25	,	40	,	70	,	100	]	,
+    [	10	,	35	,	65	,	100	]	,
+    [	5	,	10	,	65	,	90	]	,
+    [	0	,	5	,	50	,	90	]	,
+    [	0	,	0	,	10	,	75	]	
+]
+
+capture_zones = {
+    'object_forest'	:	0	,
+    'object_mount'	:	1	,
+    'object_cave'	:	2	,
+    'object_tunnel'	:	3	,
+    'object_safari'	:	4	,
+    'object_islands':	5	,
+    'object_road' 	:	6	,
+    'object_trees'	:	7	,
+    'object_valley'	:	8	,
+    'object_center'	:	9	,
+}
+
+capture_methods = {
+    'pokeball'   : 0,
+    'greatball'  : 1,
+    'ultraball'  : 2,
+    'masterball' : 3,
+}
+
+def get_chance(zone, methods):
+    row     = capture_zones[zone]
+    column  = capture_methods[methods]
+    return capture_rules[row][column]
 
 evolution = {
 1	:	[	50	,	20	]	,
