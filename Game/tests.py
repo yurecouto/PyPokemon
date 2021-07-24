@@ -5,4 +5,10 @@ from pokemons               import *
 from lists                  import *
 from random import choice
 
-print(get_chance('object_center', 'masterball'))   
+player = Player('yure')
+player.pokeballs = 100
+player.greatballs = 100
+player.ultraballs = 100
+player.masterballs = 100
+
+capture_explaination(player)

@@ -69,8 +69,13 @@ while True:
                             action_status(f'{p1.name} Atacked {p2.name}')            
 
                         elif action == 2:
-                            if player.capture(p2) == True:
-                                break
+                            capture_explaination(player)
+                            ball = int(input('>>> '))
+
+                            player.capture(p2, 'object_forest', ball)
+
+                            if player.capture(p2, 'object_forest', ball) == True:
+                                capture_status()
 
                         elif action == 3:
                             my_pokedex()

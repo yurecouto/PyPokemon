@@ -28,9 +28,7 @@ def pokedex_health_check():
 
     for pokemon, info in pokedex.items():
         if info['hp'] < 1:
-            alive -= 1
-
-    print(f'alive: {alive}')    
+            alive -= 1 
 
     while alive == 0:
         return False

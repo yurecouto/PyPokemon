@@ -37,5 +37,4 @@
 	
 ================= To Do List =================
 * use the interval between xp and max xp to make the xp bar
-- update pokedex status of the pokemons
-- improve the pokedex_health_check 
+* Make a status box for the captures

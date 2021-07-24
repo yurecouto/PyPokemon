@@ -200,3 +200,24 @@ def my_pokedex():
         print('-------------------')
 
 
+def capture_explaination(player):
+    pokeballs   = str('\033[1;91mPoke\033[m'  + '\033[1;37mballs\033[m')
+    greatballs  = str('\033[1;36mGreat\033[m' + '\033[1;37mballs\033[m')
+    ultraballs  = str('\033[1;93mUltra\033[m' + '\033[1;37mballs\033[m')
+    masterballs = str('\033[1;95mMaster\033[m'+ '\033[1;37mballs\033[m')
+
+    print('*' * 100)
+    print('|', ' ' * 96, '|')
+    print(f'|{"Choose the pokeball you wanna use to capture":^98}|') 
+    print('|', ' ' * 96, '|')
+    print(f'|{f"1 - {pokeballs}: {player.pokeballs} | 2 - {greatballs}: {player.greatballs} | 3 - {ultraballs}: {player.ultraballs} | 4 - {masterballs}: {player.masterballs}":^178}|')
+    print('|', ' ' * 96, '|')
+    print('*' * 100)
+
+
+def capture_status(p2, player):
+    print('*' * 100)
+    print('|', ' ' * 96, '|')
+    print(f'|{p2.name, "Was Captured", f"{player.pokeballs} pokeballs remaining":^98}|') 
+    print('|', ' ' * 96, '|')
+    print('*' * 100)

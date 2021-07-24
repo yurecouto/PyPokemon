@@ -31,19 +31,25 @@ class Player:
 
     def capture(self, pokemon, area, methods):
         probability = randint(0, 100)
-        self.methods -= 1
+
+        if methods == 0:
+            self.pokeballs   -= 1 
+        if methods == 1:       
+            self.greatballs  -= 1 
+        if methods == 2:       
+            self.ultraballs  -= 1  
+        if methods == 3:      
+            self.masterballs -= 1        
 
         chance = get_chance(area, methods)
         if probability <= chance:
             add(pokemon)
-            print(pokemon.name, 'Was Captured', f'{self.pokeballs} pokeballs remaining')
+            # print(pokemon.name, 'Was Captured', f'{self.pokeballs} pokeballs remaining')
             return True
-        
+
         else:
-            print(pokemon.name, 'Was not Captured', f'{self.pokeballs} pokeballs remaining')
-            return False
-        
-        
+            # print(pokemon.name, 'Was not Captured', f'{self.pokeballs} pokeballs remaining')
+            return False 
 
 
 class Pokemon:

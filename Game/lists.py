@@ -49,6 +49,8 @@ def get_damage(atacker, demaged):
     column   = atack_types[demaged]
     return atack_rules[row][column]
 
+
+# Capture rules to capture in each area with each pokeball type
 capture_rules = [
     [	65	,	90	,	100	,	100	]	,
     [	60	,	80	,	95	,	100	]	,
@@ -62,6 +64,7 @@ capture_rules = [
     [	0	,	0	,	10	,	75	]	
 ]
 
+# Areas to use as row
 capture_zones = {
     'object_forest'	:	0	,
     'object_mount'	:	1	,
@@ -75,13 +78,15 @@ capture_zones = {
     'object_center'	:	9	,
 }
 
+# Pokeball types to use as column
 capture_methods = {
-    'pokeball'   : 0,
-    'greatball'  : 1,
-    'ultraball'  : 2,
-    'masterball' : 3,
+    1  : 0, # pokeballs
+    2  : 1, # greatballs
+    3  : 2, # ultraballs
+    4  : 3, # masterballs
 }
 
+# Function that returns the correct chance to capture in each area with each pokeball type
 def get_chance(zone, methods):
     row     = capture_zones[zone]
     column  = capture_methods[methods]
