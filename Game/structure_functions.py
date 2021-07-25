@@ -1,4 +1,4 @@
-from pokedex import pokedex
+from pokedex import *
 
 def title():
     print()
@@ -200,6 +200,18 @@ def my_pokedex():
         print('-------------------')
 
 
+def my_selection():
+    for p, i in selection.items():
+        print('-------------------') 
+        print(f'|{p.name:^27}|')
+        print('-------------------') 
+
+        for keys, values in i.items():
+            print(f'|{keys:<6}: {values:>9}|')
+
+        print('-------------------')
+
+
 def capture_explaination(player):
     pokeballs   = str('\033[1;91mPoke\033[m'  + '\033[1;37mballs\033[m')
     greatballs  = str('\033[1;36mGreat\033[m' + '\033[1;37mballs\033[m')
@@ -215,9 +227,21 @@ def capture_explaination(player):
     print('*' * 100)
 
 
-def capture_status(p2, player):
-    print('*' * 100)
-    print('|', ' ' * 96, '|')
-    print(f'|{p2.name, "Was Captured", f"{player.pokeballs} pokeballs remaining":^98}|') 
-    print('|', ' ' * 96, '|')
-    print('*' * 100)
+def capture_status(p2, player, result):
+    if result == 1:
+        print('*' * 100)
+        print('|', ' ' * 96, '|')
+        print(f'|{f"{player.name.upper()}, you have captured the wild pokemon:":^98}|') 
+        print('|', ' ' * 96, '|')
+        print(f'|{p2.name:^108}|') 
+        print(f'|{"Now it is in your Pokedex.":^98}|') 
+        print('|', ' ' * 96, '|')
+        print('*' * 100)
+    
+    elif result == 2:
+        print('*' * 100)
+        print('|', ' ' * 96, '|')
+        print(f'|{f"{player.name.upper()}, you have NOT captured the wild pokemon:":^98}|') 
+        print(f'|{"Try again if you have enought pokeballs!":^98}|') 
+        print('|', ' ' * 96, '|')
+        print('*' * 100)

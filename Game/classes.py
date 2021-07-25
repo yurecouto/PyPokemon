@@ -34,21 +34,19 @@ class Player:
 
         if methods == 0:
             self.pokeballs   -= 1 
-        if methods == 1:       
+        elif methods == 1:       
             self.greatballs  -= 1 
-        if methods == 2:       
+        elif methods == 2:       
             self.ultraballs  -= 1  
-        if methods == 3:      
+        elif methods == 3:      
             self.masterballs -= 1        
 
         chance = get_chance(area, methods)
         if probability <= chance:
-            add(pokemon)
-            # print(pokemon.name, 'Was Captured', f'{self.pokeballs} pokeballs remaining')
+            add(pokemon, pokedex)
             return True
 
         else:
-            # print(pokemon.name, 'Was not Captured', f'{self.pokeballs} pokeballs remaining')
             return False 
 
 

@@ -10,10 +10,8 @@ def damage(base, intensity):
     return atack
 
 # This function adds a pokemon without resistance to the pokedex (a dictionary)   
-'''Use pokemon.number as key value'''
-def add(pokemon):
-    pokedex[pokemon] = {'number' : pokemon.number, 'type' : pokemon.type, 'level' : pokemon.lvl, 'xp' : pokemon.xp, 'max_hp': pokemon.max_health, 'hp': pokemon.health}
-    print(pokemon.name, 'Was Added to your Pokedex')
+def add(pokemon, dictionary):
+    dictionary[pokemon] = {'number' : pokemon.number, 'type' : pokemon.type, 'level' : pokemon.lvl, 'xp' : pokemon.xp, 'max_hp': pokemon.max_health, 'hp': pokemon.health}
 
 # This function sets a level to the initial pokemon
 def initial_level(pokemon, lvl):
@@ -22,7 +20,7 @@ def initial_level(pokemon, lvl):
     pokemon.health      = evolution[lvl][1]
     pokemon.max_xp      = evolution[lvl][0]
 
-# This function checks if you have the pokemon on your pokedex
+# This function checks if you have at least one alive pokemon on your pokedex
 def pokedex_health_check():
     alive = len(pokedex)
 

@@ -70,12 +70,20 @@ while True:
 
                         elif action == 2:
                             capture_explaination(player)
+
+                            print()
                             ball = int(input('>>> '))
+                            print()
 
                             player.capture(p2, 'object_forest', ball)
 
                             if player.capture(p2, 'object_forest', ball) == True:
-                                capture_status()
+                                capture_status(p2, player, 1)
+                                break
+
+                            else:
+                                capture_status(p2, player, 2)
+                                break
 
                         elif action == 3:
                             my_pokedex()
@@ -84,6 +92,7 @@ while True:
                             p_number = int(input('>>> '))
 
                             if pokedex_check(p_number) == True:
+                                add(pokemon_change(p_number), selection)
                                 p1 = pokemon_change(p_number)
                                 
                         elif action == 4:

@@ -6,9 +6,6 @@ from lists                  import *
 from random import choice
 
 player = Player('yure')
-player.pokeballs = 100
-player.greatballs = 100
-player.ultraballs = 100
-player.masterballs = 100
 
-capture_explaination(player)
+capture_status(Charmander, player, 1)
+capture_status(Charmander, player, 2)

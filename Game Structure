@@ -29,6 +29,9 @@
 
 		- pokedex health check
 			- if pokedex has at least one pokemon with more than 0 hps, the game wont break
+
+		* Create a selection of 6 pokemon available for use
+			* Force the player to change the pokemon if it's out of combat and have anothr pokemon in selection
 			
 		* Create items
 			* item to improve atack
@@ -37,4 +40,4 @@
 	
 ================= To Do List =================
 * use the interval between xp and max xp to make the xp bar
-* Make a status box for the captures
+* improve the action 3 to the selection if 6 pokemon
