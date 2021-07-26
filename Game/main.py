@@ -87,7 +87,7 @@ while True:
 
                         elif action == 3:
                             my_pokedex()
-                            pokedex_explaination()
+                            pokedex_explaination('\033[1;101mIn ONLY this area, you can use Pokemons directly from Pokedex\033[m')
 
                             p_number = int(input('>>> '))
 

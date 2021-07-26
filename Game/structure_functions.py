@@ -75,11 +75,14 @@ def area_explaination(area):
     print()
 
 
-def pokedex_explaination():
+def pokedex_explaination(txt = ''):
     print()
     print('*' * 100)
     print('|', ' ' * 96, '|')
-    print(f'|{"This is your pokedex":^98}|')    
+    print(f'|{"This is your pokedex":^98}|') 
+    print('|', ' ' * 96, '|')
+    print(f'|{txt:^109}|')    
+    print('|', ' ' * 96, '|')
     print(f'|{"Type the correct Number of the pokemon you wanna use":^98}|')    
     print('|', ' ' * 96, '|')
     print('*' * 100)
@@ -188,6 +191,19 @@ def game_over():
     print('                                                                ')
 
 
+def my_pokemon(n):
+    for p, i in pokedex.items():
+        if i['number'] == n:
+            print('-------------------') 
+            print(f'|{p.name:^27}|')
+            print('-------------------') 
+
+            for keys, values in i.items():
+                print(f'|{keys:<6}: {values:>9}|')
+
+            print('-------------------')
+
+
 def my_pokedex():
     for p, i in pokedex.items():
         print('-------------------') 
@@ -200,16 +216,8 @@ def my_pokedex():
         print('-------------------')
 
 
-def my_selection():
-    for p, i in selection.items():
-        print('-------------------') 
-        print(f'|{p.name:^27}|')
-        print('-------------------') 
-
-        for keys, values in i.items():
-            print(f'|{keys:<6}: {values:>9}|')
-
-        print('-------------------')
+def my_selection(d):
+    return
 
 
 def capture_explaination(player):
