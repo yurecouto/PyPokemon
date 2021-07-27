@@ -23,8 +23,7 @@ def add(pokemon, dictionary):
                 }
                 
         else:
-            print("\033[1;91mYOUR SELECTION IT'S FULL\033[m")
-            print("Please, change your selection")
+            return False
 
     elif dictionary == pokedex:
         dictionary[pokemon] = {
@@ -36,13 +35,12 @@ def add(pokemon, dictionary):
             'hp'        : pokemon.health
             }
 
-
 # This function sets a level to the initial pokemon
-def initial_level(pokemon, lvl):
-    pokemon.lvl         = lvl
-    pokemon.max_health  = evolution[lvl][1]
-    pokemon.health      = evolution[lvl][1]
-    pokemon.max_xp      = evolution[lvl][0]
+def initial_level(p_object, lvl):
+    p_object.lvl         = lvl
+    p_object.max_health  = evolution[lvl][1]
+    p_object.health      = evolution[lvl][1]
+    p_object.max_xp      = evolution[lvl][0]
 
 # This function checks if you have at least one alive pokemon on your pokedex
 def pokedex_health_check():
@@ -81,3 +79,20 @@ def pokedex_info_update(p_object):
                 pokedex[p_object]['xp']     = p_object.xp
                 pokedex[p_object]['level']  = p_object.lvl
                 return pokedex
+
+# This p_object are going to be used as a dictionary 
+def selection_change(p_object, p_object_2):
+    # it start's checking if the pokemon is in the pokedex
+    # adding the pokemon to the selection if the selection isn't full
+    if len(selection) <= 5:
+        for p, i in pokedex.items():
+            if i['number'] == p_object.number:
+                add(p, selection)
+
+    # Receive the number of the object in the selection to change to another
+    # check if it's in the selection
+    # return the new one in it's place
+    else:
+        for p, i in pokedex.items():
+            if i['number'] == p_object.number:
+                add(p, selection)

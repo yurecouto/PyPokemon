@@ -30,7 +30,8 @@
 		- pokedex health check
 			- if pokedex has at least one pokemon with more than 0 hps, the game wont break
 
-		* Create a selection of 6 pokemon available for use
+		- Create a selection of 6 pokemon available for use
+			* Create a way to change move the pokemon from pokedex to selection 
 			* Create a menu between the areas to change the 
 			* Force the player to change the pokemon if it's out of combat and have anothr pokemon in selection
 			

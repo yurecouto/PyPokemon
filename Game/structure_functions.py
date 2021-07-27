@@ -216,10 +216,6 @@ def my_pokedex():
         print('-------------------')
 
 
-def my_selection(d):
-    pass
-
-
 def capture_explaination(player):
     pokeballs   = str('\033[1;91mPoke\033[m'  + '\033[1;37mballs\033[m')
     greatballs  = str('\033[1;36mGreat\033[m' + '\033[1;37mballs\033[m')

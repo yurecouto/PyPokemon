@@ -10,8 +10,6 @@ add(Bulbasaur,  selection)
 add(Squirtle,   selection)
 add(Eevee,      selection)
 add(Pikachu,    selection)
-add(Dragonite,  selection)
-add(Pinsir,     selection)
 
-print(selection)
+print(selection[Charizard])
 
