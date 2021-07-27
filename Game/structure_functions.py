@@ -190,9 +190,9 @@ def game_over():
     print('            \______/     \_/    \_______/|__/                   ')
     print('                                                                ')
 
-
-def my_pokemon(n):
-    for p, i in pokedex.items():
+# Individual card
+def my_pokemon(n, dictionary):
+    for p, i in dictionary.items():
         if i['number'] == n:
             print('-------------------') 
             print(f'|{p.name:^27}|')
@@ -203,7 +203,7 @@ def my_pokemon(n):
 
             print('-------------------')
 
-
+# Multiple card
 def my_pokedex():
     for p, i in pokedex.items():
         print('-------------------') 
@@ -217,7 +217,7 @@ def my_pokedex():
 
 
 def my_selection(d):
-    return
+    pass
 
 
 def capture_explaination(player):

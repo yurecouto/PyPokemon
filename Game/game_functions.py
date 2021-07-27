@@ -11,7 +11,31 @@ def damage(base, intensity):
 
 # This function adds a pokemon without resistance to the pokedex (a dictionary)   
 def add(pokemon, dictionary):
-    dictionary[pokemon] = {'number' : pokemon.number, 'type' : pokemon.type, 'level' : pokemon.lvl, 'xp' : pokemon.xp, 'max_hp': pokemon.max_health, 'hp': pokemon.health}
+    if dictionary == selection:
+        if len(dictionary) <= 5:
+            dictionary[pokemon] = {
+                'number'    : pokemon.number, 
+                'type'      : pokemon.type, 
+                'level'     : pokemon.lvl, 
+                'xp'        : pokemon.xp, 
+                'max_hp'    : pokemon.max_health, 
+                'hp'        : pokemon.health
+                }
+                
+        else:
+            print("\033[1;91mYOUR SELECTION IT'S FULL\033[m")
+            print("Please, change your selection")
+
+    elif dictionary == pokedex:
+        dictionary[pokemon] = {
+            'number'    : pokemon.number, 
+            'type'      : pokemon.type, 
+            'level'     : pokemon.lvl, 
+            'xp'        : pokemon.xp, 
+            'max_hp'    : pokemon.max_health, 
+            'hp'        : pokemon.health
+            }
+
 
 # This function sets a level to the initial pokemon
 def initial_level(pokemon, lvl):
@@ -57,5 +81,3 @@ def pokedex_info_update(p_object):
                 pokedex[p_object]['xp']     = p_object.xp
                 pokedex[p_object]['level']  = p_object.lvl
                 return pokedex
-
-#

@@ -5,10 +5,13 @@ from pokemons               import *
 from lists                  import *
 from random import choice
 
-add(Charizard,  pokedex)
-add(Bulbasaur,  pokedex)
-add(Squirtle,   pokedex)
-add(Eevee,      pokedex)
-add(Pikachu,    pokedex)
-add(Dragonite,  pokedex)
+add(Charizard,  selection)
+add(Bulbasaur,  selection)
+add(Squirtle,   selection)
+add(Eevee,      selection)
+add(Pikachu,    selection)
+add(Dragonite,  selection)
+add(Pinsir,     selection)
+
+print(selection)
 
