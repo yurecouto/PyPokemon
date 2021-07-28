@@ -43,7 +43,7 @@ class Player:
 
         chance = get_chance(area, methods)
         if probability <= chance:
-            add(pokemon, pokedex)
+            add(pokemon)
             return True
 
         else:

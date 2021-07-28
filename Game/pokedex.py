@@ -3,4 +3,5 @@
 pokedex = {}
 
 # This is the selection with the battle pokemons
-selection = {}
+selection = [{}, {}, {}, {}, {}, {}]
+
