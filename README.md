@@ -27,24 +27,24 @@ Even though the names are self explanatory bellow will be explanated the functio
 like name, number, xp, max_xp, lvl, health, max_health, the explaination of these atributes are not going
 to be done now, the methods of each pokemon are:
 
-level_up(self)                  =>         This method makes the pokemon up it's level. and
+- level_up(self)                  =>         This method makes the pokemon up it's level. and
                                          sets the next level atributes for the pokemon object.
 
-atack(self, opponent)           =>         This methos makes the pokemon atack another pokemon 
+- atack(self, opponent)           =>         This methos makes the pokemon atack another pokemon 
                                          it uses an other function from game_functions (that
                                          uses the self.health as a paramether to atack, and the
                                          function get_damage will be explainated in the lists
                                          function.
 
-set_level(self, min_l, max_l)   =>         This one sets a randomic level, you can set the 
+- set_level(self, min_l, max_l)   =>         This one sets a randomic level, you can set the 
                                          minimum level and maximum level available, and sets each
                                          level atributes for the pokemon object, this function
                                          will will return in the explaination of the main.
 
-initial_level(self)             =>         It makes the same thing of the last one, but it's
+- initial_level(self)             =>         It makes the same thing of the last one, but it's
                                          olny used for the initial pokemons.
                                          
-pokemon_out(self)               =>         This method returns a boolean valor based in the 
+- pokemon_out(self)               =>         This method returns a boolean valor based in the 
                                          pokemon.health.
                                          
   And the Player's class represent's the player, and haves atributes referent to the bag of the
