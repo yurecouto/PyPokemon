@@ -83,7 +83,6 @@ while True:
 
                             else:
                                 capture_status(p2, player, 2)
-                                break
 
                         elif action == 3:
                             pokedex_cards()
@@ -121,6 +120,8 @@ while True:
 
                 pokedex_cards()
 
+                selection_menu("Now, you will select your 6 pokemons, they will compose your selection!")
+
                 p_1 = int(input('>>> '))
                 p_2 = int(input('>>> '))
                 p_3 = int(input('>>> '))
@@ -129,13 +130,18 @@ while True:
                 p_6 = int(input('>>> '))
 
                 selection_fill(
-                    pokedex_check(p_1), 
-                    pokedex_check(p_2), 
-                    pokedex_check(p_3), 
-                    pokedex_check(p_4), 
-                    pokedex_check(p_5), 
-                    pokedex_check(p_6)
+                    pokemon_change(p_1), 
+                    pokemon_change(p_2), 
+                    pokemon_change(p_3), 
+                    pokemon_change(p_4), 
+                    pokemon_change(p_5), 
+                    pokemon_change(p_6)
                     )
+
+                selection_cards()
+
+                area_explaination('The Objects Mount')
+                # 5, 15
 
 
                 break

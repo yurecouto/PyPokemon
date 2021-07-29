@@ -200,13 +200,13 @@ Clefable    = Fairy('Clefairy', 36)
 # P65%, G90%, U100%
 object_forest = [
     Pikachu, Caterpie, Butterfree, Bellsprout, Exeggcute, 
-    Pidgey, Oddish, Gloom, Beedrill, Weedle, Kakuna, 
-    Weepinbell, Abra
+    Pidgey, Oddish, Gloom, Weedle, Kakuna, Zubat, 
+    Weepinbell, Abra, Rattata
     ]
 
 # P60%, G80%, U95%
 object_mount = [
-    Paras, Clefairy, Mankey, Rattata, Raticate,
+    Paras, Clefairy, Mankey, Beedrill, Raticate,
     Spearow, Doduo, Jigglypuff, Wigglytuff, Farfetchd, 
     Pidgeotto, Primeape, Metapod, Clefable
     ]
@@ -220,7 +220,7 @@ object_cave = [
 
 # P50%, G70%, U90%
 object_tunnel = [
-    Zubat, Machop, Diglett, Dugtrio, Machoke, Golem,
+    Machop, Diglett, Dugtrio, Machoke, Golem,
     Electrode, Omanyte, Omastar, Sandshrew, Sandslash, Muk
     ]
 

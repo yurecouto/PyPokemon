@@ -69,64 +69,34 @@ def pokedex_info_update(p_object):
 # 'selection_fill(pokedex_check(107), pokedex_check(7), pokedex_check(17), pokedex_check(10), pokedex_check(70), pokedex_check(71))'
 def selection_fill(p_1, p_2, p_3, p_4, p_5, p_6):
     if p_1 in pokedex:
-      selection[0][p_1] = {                           
-            'number'    : p_1.number, 
-            'type'      : p_1.type, 
-            'level'     : p_1.lvl, 
-            'xp'        : p_1.xp, 
-            'max_hp'    : p_1.max_health, 
-            'hp'        : p_1.health
-            }
+        selection[0][p_1] = {                           
+            'number': p_1.number, 'type': p_1.type, 'level': p_1.lvl, 'xp': p_1.xp, 'max_hp': p_1.max_health, 'hp': p_1.health
+                }
 
     if p_2 in pokedex:
-        selection[1][p_2] = {                           
-        'number'    : p_2.number, 
-        'type'      : p_2.type, 
-        'level'     : p_2.lvl, 
-        'xp'        : p_2.xp, 
-        'max_hp'    : p_2.max_health, 
-        'hp'        : p_2.health
-        }
+        selection[1][p_2] = {
+            'number': p_2.number, 'type': p_2.type, 'level': p_2.lvl, 'xp': p_2.xp, 'max_hp': p_2.max_health, 'hp': p_2.health
+                }
 
     if p_3 in pokedex:
         selection[2][p_3] = {                           
-        'number'    : p_3.number, 
-        'type'      : p_3.type, 
-        'level'     : p_3.lvl, 
-        'xp'        : p_3.xp, 
-        'max_hp'    : p_3.max_health, 
-        'hp'        : p_3.health
-        }
+            'number': p_3.number, 'type': p_3.type, 'level': p_3.lvl, 'xp': p_3.xp, 'max_hp': p_3.max_health, 'hp': p_3.health
+                }
 
     if p_4 in pokedex: 
         selection[3][p_4] = {                           
-        'number'    : p_4.number, 
-        'type'      : p_4.type, 
-        'level'     : p_4.lvl, 
-        'xp'        : p_4.xp, 
-        'max_hp'    : p_4.max_health, 
-        'hp'        : p_4.health
-        }
+            'number': p_4.number, 'type': p_4.type, 'level': p_4.lvl, 'xp': p_4.xp, 'max_hp': p_4.max_health, 'hp': p_4.health
+                }
 
     if p_5 in pokedex:
         selection[4][p_5] = {                           
-        'number'    : p_5.number, 
-        'type'      : p_5.type, 
-        'level'     : p_5.lvl, 
-        'xp'        : p_5.xp, 
-        'max_hp'    : p_5.max_health, 
-        'hp'        : p_5.health
-        }
+            'number': p_5.number, 'type': p_5.type, 'level': p_5.lvl, 'xp': p_5.xp, 'max_hp': p_5.max_health, 'hp': p_5.health
+                }
 
     if p_6 in pokedex:  
         selection[5][p_6] = {                           
-        'number'    : p_6.number, 
-        'type'      : p_6.type, 
-        'level'     : p_6.lvl, 
-        'xp'        : p_6.xp, 
-        'max_hp'    : p_6.max_health, 
-        'hp'        : p_6.health
-        }
+            'number': p_6.number, 'type': p_6.type, 'level': p_6.lvl, 'xp': p_6.xp, 'max_hp': p_6.max_health, 'hp': p_6.health
+                }
     
 # Use the function pokedex check to use the numbers on the input, it will return the pokemons
 # 'selection_change(pokedex_check(107), pokedex_check(151))'

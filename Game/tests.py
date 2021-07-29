@@ -33,5 +33,8 @@ add(Jynx)
 add(Psyduck)
 add(Nidoking)
 
-pokedex_cards()
+selection_fill(Pikachu, Eevee, Charmander, Electabuzz, Butterfree, Squirtle)
 
+selection_cards()
+
+selection_menu("Now, you will select your 6 pokemons, they will compose your selection")

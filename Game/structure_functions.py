@@ -190,7 +190,7 @@ def game_over():
     print('            \______/     \_/    \_______/|__/                   ')
     print('                                                                ')
 
-# Individual card
+'''# Individual card
 def my_pokemon(n, dictionary):
     for p, i in dictionary.items():
         if i['number'] == n:
@@ -213,7 +213,7 @@ def my_pokedex():
         for keys, values in i.items():
             print(f'|{keys:<6}: {values:>9}|')
 
-        print('-------------------')
+        print('-------------------')'''
 
 
 def capture_explaination(player):
@@ -226,7 +226,7 @@ def capture_explaination(player):
     print('|', ' ' * 96, '|')
     print(f'|{"Choose the pokeball you wanna use to capture":^98}|') 
     print('|', ' ' * 96, '|')
-    print(f'|{f"1 - {pokeballs}: {player.pokeballs} | 2 - {greatballs}: {player.greatballs} | 3 - {ultraballs}: {player.ultraballs} | 4 - {masterballs}: {player.masterballs}":^178}|')
+    print(f'|{f"0 - {pokeballs}: {player.pokeballs} | 1 - {greatballs}: {player.greatballs} | 2 - {ultraballs}: {player.ultraballs} | 3 - {masterballs}: {player.masterballs}":^178}|')
     print('|', ' ' * 96, '|')
     print('*' * 100)
 
@@ -261,4 +261,40 @@ def pokedex_cards():
         print('-' * 100)
 
 
+def selection_cards():
+    print('-' * 108)
 
+    pokemons_0 = list(selection[0].keys())
+    pokemons_1 = list(selection[1].keys())
+    pokemons_2 = list(selection[2].keys())
+    pokemons_3 = list(selection[3].keys())
+    pokemons_4 = list(selection[4].keys())
+    pokemons_5 = list(selection[5].keys())
+
+    print(f'| {pokemons_0[0].name:^24} || {pokemons_1[0].name:^24} || {pokemons_2[0].name:^24} || {pokemons_3[0].name:^24} || {pokemons_4[0].name:^24} || {pokemons_5[0].name:^24} |')
+
+    print(('|' + '-' * 16 + '|') * 6)
+
+    print(f'|{"number":<6}:{pokemons_0[0].number:>9}||{"number":<6}:{pokemons_1[0].number:>9}||{"number":<6}:{pokemons_2[0].number:>9}||{"number":<6}:{pokemons_3[0].number:>9}||{"number":<6}:{pokemons_4[0].number:>9}||{"number":<6}:{pokemons_5[0].number:>9}|') 
+
+    print(f'|{"type":<6}:{pokemons_0[0].type:>9}||{"type":<6}:{pokemons_1[0].type:>9}||{"type":<6}:{pokemons_2[0].type:>9}||{"type":<6}:{pokemons_3[0].type:>9}||{"type":<6}:{pokemons_4[0].type:>9}||{"type":<6}:{pokemons_5[0].type:>9}|')
+
+    print(f'|{"health":<6}:{pokemons_0[0].health:>9}||{"health":<6}:{pokemons_1[0].health:>9}||{"health":<6}:{pokemons_2[0].health:>9}||{"health":<6}:{pokemons_3[0].health:>9}||{"health":<6}:{pokemons_4[0].health:>9}||{"health":<6}:{pokemons_5[0].health:>9}|')
+
+    print(f'|{"level":<6}:{pokemons_0[0].lvl:>9}||{"level":<6}:{pokemons_1[0].lvl:>9}||{"level":<6}:{pokemons_2[0].lvl:>9}||{"level":<6}:{pokemons_3[0].lvl:>9}||{"level":<6}:{pokemons_4[0].lvl:>9}||{"level":<6}:{pokemons_5[0].lvl:>9}|')
+
+    print(f'|{"XP":<6}:{pokemons_0[0].xp:>9}||{"XP":<6}:{pokemons_1[0].xp:>9}||{"XP":<6}:{pokemons_2[0].xp:>9}||{"XP":<6}:{pokemons_3[0].xp:>9}||{"XP":<6}:{pokemons_4[0].xp:>9}||{"XP":<6}:{pokemons_5[0].xp:>9}|')
+
+    print(f'|{"lvl_UP":<6}:{pokemons_0[0].max_xp:>9}||{"lvl_UP":<6}:{pokemons_1[0].max_xp:>9}||{"lvl_UP":<6}:{pokemons_2[0].max_xp:>9}||{"lvl_UP":<6}:{pokemons_3[0].max_xp:>9}||{"lvl_UP":<6}:{pokemons_4[0].max_xp:>9}||{"lvl_UP":<6}:{pokemons_5[0].max_xp:>9}|')
+
+    print('-' * 108)
+
+
+def selection_menu(txt):
+    print()
+    print('*' * 100)
+    print('|' + ' ' * 98 + '|')
+    print('|' + f'{txt:^98}' + '|')
+    print('|' + ' ' * 98 + '|')
+    print('*' * 100)
+    print()
