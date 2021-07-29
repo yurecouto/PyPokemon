@@ -65,7 +65,8 @@ def pokedex_info_update(p_object):
                 pokedex[p_object]['level']  = p_object.lvl
                 return pokedex
 
-
+# Use the function pokedex check to use the numbers on the input, it will return the pokemons
+# 'selection_fill(pokedex_check(107), pokedex_check(7), pokedex_check(17), pokedex_check(10), pokedex_check(70), pokedex_check(71))'
 def selection_fill(p_1, p_2, p_3, p_4, p_5, p_6):
     if p_1 in pokedex:
       selection[0][p_1] = {                           
@@ -127,16 +128,19 @@ def selection_fill(p_1, p_2, p_3, p_4, p_5, p_6):
         'hp'        : p_6.health
         }
     
-
+# Use the function pokedex check to use the numbers on the input, it will return the pokemons
+# 'selection_change(pokedex_check(107), pokedex_check(151))'
 def selection_change(p_object_in, p_object_out):
-    if p_object_in in pokedex and p_object_out in pokedex:                 # check if both pokemons are in pokedex
-        for n in range(0, 6):                                           # a 0 to 5 wip (to check all the 6 dictionaries of the selection)
-            if selection[n][p_object_out] == p_object_out:                  # checks if the pokemon you want to change are in the selection
-                selection[n][p_object_in] = {                            # 
-                    'number'    : p_object_in.number, 
-                    'type'      : p_object_in.type, 
-                    'level'     : p_object_in.lvl, 
-                    'xp'        : p_object_in.xp, 
-                    'max_hp'    : p_object_in.max_health, 
-                    'hp'        : p_object_in.health
-                    }
+    for n in range(0, 6):
+        for k, v in selection[n].items():
+            if p_object_out == k:
+                k == p_object_in
+                selection[n][k] = {
+                            'number'    : p_object_in.number, 
+                            'type'      : p_object_in.type, 
+                            'level'     : p_object_in.lvl, 
+                            'xp'        : p_object_in.xp, 
+                            'max_hp'    : p_object_in.max_health, 
+                            'hp'        : p_object_in.health
+        
+                         }

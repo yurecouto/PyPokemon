@@ -194,14 +194,14 @@ def game_over():
 def my_pokemon(n, dictionary):
     for p, i in dictionary.items():
         if i['number'] == n:
-            print('-------------------') 
-            print(f'|{p.name:^27}|')
-            print('-------------------') 
+            print('------------------') 
+            print(f'|{p.name:^26}|')
+            print('------------------') 
 
             for keys, values in i.items():
                 print(f'|{keys:<6}: {values:>9}|')
 
-            print('-------------------')
+            print('------------------')
 
 # Multiple card
 def my_pokedex():
@@ -249,3 +249,16 @@ def capture_status(p2, player, result):
         print(f'|{"Try again if you have enought pokeballs!":^98}|') 
         print('|', ' ' * 96, '|')
         print('*' * 100)
+
+
+def pokedex_cards():
+    print('-' * 100)
+    print (f"| {'Name':^10} | {'Number':^12} | {'Type':^12} | {'Level':^12} | {'XP':^12} | {'Max HP':^10} | {'HP':^10} |")
+    print('-' * 100)
+
+    for p, i in pokedex.items():
+        print(f"| {p.name:<20} | {i['number']:^12} | {i['type']:^12} | {i['level']:^12} | {i['xp']:^12} | {i['max_hp']:^10} | {i['hp']:^10} |")
+        print('-' * 100)
+
+
+

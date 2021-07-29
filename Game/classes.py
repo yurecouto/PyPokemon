@@ -60,7 +60,7 @@ class Pokemon:
         self.health     = 20
         self.max_health = 20
 
-    # this function will be called after every battle 
+    # This function will be called after every battle 
     def level_up(self):
         if self.xp >= self.max_xp:
             self.lvl        += 1
@@ -89,6 +89,11 @@ class Pokemon:
         self.max_health  = evolution[lvl][1]
         self.health      = evolution[lvl][1]
         self.max_xp      = evolution[lvl][0]
+
+    # Check if it's time to change the pokemon
+    def pokemon_out(self):
+        if self.health <= 0:
+            return False
             
 
 class Normal(Pokemon):
