@@ -19,7 +19,9 @@ class Player:
         self.super_potions  = 0
         self.hyper_potions  = 0
         self.max_potions    = 0
-        self.xp_potions     = 0
+        self.xp_potions_s   = 0
+        self.xp_potions_m   = 0
+        self.xp_potions_l   = 0
 
         # Evolve Stones
         self.moon_stones    = 0
@@ -35,7 +37,7 @@ class Player:
 
         if methods == '1':
             if self.pokeballs > 0:
-                self.pokeballs   -= 1 
+                self.pokeballs    -= 1 
 
 
         elif methods == '2':       
@@ -50,7 +52,7 @@ class Player:
           
         elif methods == '4':      
             if self.masterballs > 0:
-                self.masterballs   -= 1 
+                self.masterballs  -= 1 
 
 
         chance = get_chance(area, methods)
@@ -61,6 +63,51 @@ class Player:
         else:
             return False
 
+    def use_potions(self, potion_kind, pokemon):
+        if potion_kind in '0123':
+            if potion_kind == '0':
+                efect = 20
+                self.potions -= 1
+
+            if potion_kind == '1':
+                efect = 50
+                self.super_potions -= 1
+
+            if potion_kind == '2':
+                efect = 200
+                self.hyper_potions -= 1
+
+            if (pokemon.health + efect) >= pokemon.max_health:
+                pokemon.health == pokemon.max_health
+                print(pokemon.health)
+                return pokemon.health
+            
+            elif (pokemon.health + efect) < pokemon.max_health:
+                pokemon.health += efect
+                print(pokemon.health)
+                return pokemon.health
+
+            if potion_kind == '3':
+                pokemon.health == pokemon.max_health
+                self.max_potions -= 1
+                print(pokemon.health)
+                return pokemon.health
+
+        if potion_kind in '456':
+            if potion_kind == '4':
+                efect = 50
+                self.xp_potions_s -= 1
+
+            if potion_kind == '5':
+                efect = 200
+                self.xp_potions_m -= 1
+
+            if potion_kind == '6':
+                efect = 600
+                self.xp_potions_l -= 1
+
+            pokemon.xp += efect
+            return pokemon.xp
 
 
 class Pokemon:
@@ -96,8 +143,8 @@ class Pokemon:
         self.max_xp      = evolution[lvl][0]
 
     # This function sets a level to the initial pokemon
-    def initial_level(self):
-        lvl = 5
+    def initial_level(self, level = 5):
+        lvl = level
         self.lvl         = lvl
         self.max_health  = evolution[lvl][1]
         self.health      = evolution[lvl][1]
@@ -107,7 +154,51 @@ class Pokemon:
     def pokemon_out(self):
         if self.health <= 0:
             return False
+
+    # apply each potion effects in the object
+    def use_potions(self, player, potion_kind):
+        if potion_kind in '0123':
+            if potion_kind == '0':
+                efect = 20
+                player.potions -= 1
+
+            if potion_kind == '1':
+                efect = 50
+                player.super_potions -= 1
+
+            if potion_kind == '2':
+                efect = 200
+                player.hyper_potions -= 1
+
+            if (self.health + efect) >= self.max_health:
+                self.health = self.max_health
+                return self.health
             
+            elif (self.health + efect) < self.max_health:
+                self.health += efect
+                return self.health
+
+            if potion_kind == '3':
+                self.health == self.max_health
+                player.max_potions -= 1
+                return self.health
+
+        if potion_kind in '456':
+            if potion_kind == '4':
+                efect = 50
+                player.xp_potions_s -= 1
+
+            if potion_kind == '5':
+                efect = 200
+                player.xp_potions_m -= 1
+
+            if potion_kind == '6':
+                efect = 600
+                player.xp_potions_l -= 1
+
+            self.xp += efect
+            return self.xp
+
 
 class Normal(Pokemon):
     def __init__(self, name, number):

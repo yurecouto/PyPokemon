@@ -114,3 +114,4 @@ def selection_change(p_object_in, p_object_out):
                             'hp'        : p_object_in.health
         
                          }
+

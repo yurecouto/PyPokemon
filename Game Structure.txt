@@ -37,9 +37,8 @@
 			
 		* Create items
 			* Create a Bag Menu
-			* Create a function to return the items effects 
-			* item to improve atack
-			* health potions
+			- Create a function to return the items effects 
+			- health potions
 			* evolutions rocks
 
 		* Scale the code
