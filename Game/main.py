@@ -72,7 +72,7 @@ while True:
                             capture_explaination(player)
 
                             print()
-                            ball = int(input('>>> '))
+                            ball = str(input('>>> '))
                             print()
 
                             player.capture(p2, 'object_forest', ball)
