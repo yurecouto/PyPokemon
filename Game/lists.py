@@ -80,10 +80,10 @@ capture_zones = {
 
 # Pokeball types to use as column
 capture_methods = {
-    1  : 0, # pokeballs
-    2  : 1, # greatballs
-    3  : 2, # ultraballs
-    4  : 3, # masterballs
+    '1'  : 0, # pokeballs
+    '2'  : 1, # greatballs
+    '3'  : 2, # ultraballs
+    '4'  : 3, # masterballs
 }
 
 # Function that returns the correct chance to capture in each area with each pokeball type

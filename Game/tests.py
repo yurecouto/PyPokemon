@@ -5,36 +5,20 @@ from pokemons               import *
 from lists                  import *
 from random import choice
 
-'''add(Pikachu)
-add(Charmander)
-add(Bulbasaur)
-add(Eevee)
-add(Mew)
-add(Dragonite)
+'''FIX THIS'''
 
-selection_fill(Pikachu, Charmander, Bulbasaur, Eevee, Mew, Dragonite)
+p = Player('Yure')
 
-for n in range(0, 6):
-    print(selection[n])
-    
-selection_change(pokedex_check(107), pokedex_check(151))
-selection_fill(pokedex_check(107), pokedex_check(107), pokedex_check(107), pokedex_check(107), pokedex_check(107), pokedex_check(107))
+capture_explaination(p)
 
-for n in range(0, 6):
-    print(selection[n])'''
+b = str(input('>>> '))
 
-add(Pikachu)
-add(Eevee)
-add(Charmander)
-add(Electabuzz)
-add(Butterfree)
-add(Squirtle)
-add(Jynx)
-add(Psyduck)
-add(Nidoking)
+test = p.capture(Charmander, 'object_forest', b)
 
-selection_fill(Pikachu, Eevee, Charmander, Electabuzz, Butterfree, Squirtle)
+if test == True:
+    capture_status(Charmander, p, 1)
 
-selection_cards()
+if test == False:
+    capture_status(Charmander, p, 2)
 
-selection_menu("Now, you will select your 6 pokemons, they will compose your selection")
+capture_explaination(p)

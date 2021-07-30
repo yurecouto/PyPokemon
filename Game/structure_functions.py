@@ -226,7 +226,7 @@ def capture_explaination(player):
     print('|', ' ' * 96, '|')
     print(f'|{"Choose the pokeball you wanna use to capture":^98}|') 
     print('|', ' ' * 96, '|')
-    print(f'|{f"0 - {pokeballs}: {player.pokeballs} | 1 - {greatballs}: {player.greatballs} | 2 - {ultraballs}: {player.ultraballs} | 3 - {masterballs}: {player.masterballs}":^178}|')
+    print(f'|{f"1 - {pokeballs}: {player.pokeballs} | 2 - {greatballs}: {player.greatballs} | 3 - {ultraballs}: {player.ultraballs} | 4 - {masterballs}: {player.masterballs}":^178}|')
     print('|', ' ' * 96, '|')
     print('*' * 100)
 

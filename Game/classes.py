@@ -32,13 +32,13 @@ class Player:
     def capture(self, pokemon, area, methods):
         probability = randint(0, 100)
 
-        if methods == 0:
+        if methods == '1':
             self.pokeballs   -= 1 
-        elif methods == 1:       
+        elif methods == '2':       
             self.greatballs  -= 1 
-        elif methods == 2:       
+        elif methods == '3':       
             self.ultraballs  -= 1  
-        elif methods == 3:      
+        elif methods == '4':      
             self.masterballs -= 1        
 
         chance = get_chance(area, methods)
