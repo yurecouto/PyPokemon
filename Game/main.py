@@ -1,8 +1,8 @@
 from random                 import choice, randint
+from time                   import sleep
 from classes                import *
 from game_functions         import *
 from structure_functions    import *
-from pokedex                import pokedex
 from pokemons               import *
                                                           
 while True:
@@ -32,7 +32,7 @@ while True:
             while True:
 
                 explaination_1()
-                player.pokeballs = 20
+                player.pokeballs = 10
 
                 area_0 = len(object_forest)
                 area_1 = len(object_mount)
@@ -49,33 +49,45 @@ while True:
                 # 3, 7
 
                 while area_0 > 0:
-                    p2 = choice(object_forest)
+                    pokedex_info_update(p1)
+                    p1.level_up()
 
+
+                    p2 = choice(object_forest)
                     p2.set_level(3, 7)
 
-                    while p2.health > 0:
-                        pokedex_health_check()    
-                        if pokedex_health_check() == False:
-                            break
-
-                        pokedex_info_update(p1)
-                        p1.level_up()
+                    while p2.health > 0: 
                         main_interface(p1, p2)
 
                         action = int(input('>>> '))
+
+                        if pokedex_health_check() == False:
+                            break
+
+                        if p1.pokemon_out() == False:
+                            pokedex_cards()
+                            pokedex_explaination('\033[1;101mIn ONLY this area, you can use Pokemons directly from Pokedex\033[m')
+
+                            p_number = int(input('>>> '))
+
+                            if pokedex_check(p_number) == True:
+                                p1 = pokemon_change(p_number)
 
                         if action == 1:
                             p1.atack(p2)
                             action_status(f'{p1.name} Atacked {p2.name}')            
 
                         elif action == 2:
+                            if player.pokeballs == 0 and player.greatballs == 0  and player.ultraballs == 0 and player.masterballs == 0 :
+                                capture_status(p2, player, 3)
+                                break
+                                
+                            print()
                             capture_explaination(player)
 
                             print()
                             ball = str(input('>>> '))
                             print()
-
-                            player.capture(p2, 'object_forest', ball)
 
                             if player.capture(p2, 'object_forest', ball) == True:
                                 capture_status(p2, player, 1)
@@ -96,15 +108,6 @@ while True:
                         elif action == 4:
                             pass
 
-                        if p1.pokemon_out() == False:
-                            pokedex_cards()
-                            pokedex_explaination('\033[1;101mIn ONLY this area, you can use Pokemons directly from Pokedex\033[m')
-
-                            p_number = int(input('>>> '))
-
-                            if pokedex_check(p_number) == True:
-                                p1 = pokemon_change(p_number)
-                    
                         p2.atack(p1)
                         action_status(f'{p2.name} Atacked {p1.name}')
 

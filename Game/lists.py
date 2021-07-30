@@ -52,10 +52,10 @@ def get_damage(atacker, demaged):
 
 # Capture rules to capture in each area with each pokeball type
 capture_rules = [
-    [	65	,	90	,	100	,	100	]	,
-    [	60	,	80	,	95	,	100	]	,
-    [	55	,	75	,	90	,	100	]	,
-    [	50	,	70	,	90	,	100	]	,
+    [	60	,	90	,	100	,	100	]	,
+    [	55	,	80	,	95	,	100	]	,
+    [	50	,	75	,	90	,	100	]	,
+    [	45	,	70	,	90	,	100	]	,
     [	35	,	50	,	75	,	100	]	,
     [	25	,	40	,	70	,	100	]	,
     [	10	,	35	,	65	,	100	]	,

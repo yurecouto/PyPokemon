@@ -248,6 +248,13 @@ def capture_status(p2, player, result):
         print(f'|{f"{player.name.upper()}, you have NOT captured the wild pokemon:":^98}|') 
         print(f'|{"Try again if you have enought pokeballs!":^98}|') 
         print('|', ' ' * 96, '|')
+        print('*' * 100)  
+
+    elif result == 3:
+        print('*' * 100)
+        print('|', ' ' * 96, '|')
+        print(f'|{f"{player.name.upper()}, You do NOT have enought POKEBALLS" :^98}|') 
+        print('|', ' ' * 96, '|')
         print('*' * 100)
 
 

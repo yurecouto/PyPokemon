@@ -2,6 +2,7 @@ from game_functions import damage, add
 from lists import get_chance, get_damage, evolution
 from pokedex import pokedex
 from random import randint
+from structure_functions import capture_status
 
 class Player:
     def __init__(self, name):
@@ -33,13 +34,24 @@ class Player:
         probability = randint(0, 100)
 
         if methods == '1':
-            self.pokeballs   -= 1 
+            if self.pokeballs > 0:
+                self.pokeballs   -= 1 
+
+
         elif methods == '2':       
-            self.greatballs  -= 1 
+            if self.greatballs > 0:
+                self.greatballs   -= 1 
+
+          
         elif methods == '3':       
-            self.ultraballs  -= 1  
+            if self.ultraballs > 0:
+                self.ultraballs   -= 1 
+
+          
         elif methods == '4':      
-            self.masterballs -= 1        
+            if self.masterballs > 0:
+                self.masterballs   -= 1 
+
 
         chance = get_chance(area, methods)
         if probability <= chance:
@@ -47,7 +59,8 @@ class Player:
             return True
 
         else:
-            return False 
+            return False
+
 
 
 class Pokemon:
