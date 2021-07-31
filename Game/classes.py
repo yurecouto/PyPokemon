@@ -2,7 +2,7 @@ from game_functions import damage, add
 from lists import get_chance, get_damage, evolution
 from pokedex import pokedex
 from random import randint
-from structure_functions import capture_status
+from structure_functions import capture_status, empty_bag
 
 class Player:
     def __init__(self, name):
@@ -113,19 +113,28 @@ class Pokemon:
     def use_potions(self, player, potion_kind):
         if potion_kind in '0123':
             if potion_kind == '0':
-                efect = 20
-                # bloquear caso as poções não sejam suficientes
-                player.potions -= 1
+                if player.potions > 0:
+                    efect = 20
+                    player.potions -= 1
+                
+                else:
+                    empty_bag('Potions')
 
             if potion_kind == '1':
-                efect = 50
-                # bloquear caso as poções não sejam suficientes
-                player.super_potions -= 1
+                if player.super_potions > 0:
+                    efect = 50
+                    player.super_potions -= 1
+                
+                else:
+                    empty_bag('Super Potions')
 
             if potion_kind == '2':
-                efect = 200
-                # bloquear caso as poções não sejam suficientes
-                player.hyper_potions -= 1
+                if player.hyper_potions > 0:
+                    efect = 200
+                    player.hyper_potions -= 1
+
+                else:
+                    empty_bag('Hyper Potions')
 
             if (self.health + efect) >= self.max_health:
                 self.health = self.max_health
@@ -136,23 +145,38 @@ class Pokemon:
                 return self.health
 
             if potion_kind == '3':
-                self.health == self.max_health
-                # bloquear caso as poções não sejam suficientes
-                player.max_potions -= 1
-                return self.health
+                if player.max_potions > 0:
+                    self.health == self.max_health
+                    player.max_potions -= 1
+                    return self.health
+
+                else:
+                    empty_bag('Super Potions')
 
         if potion_kind in '456':
             if potion_kind == '4':
-                efect = 50
-                player.xp_potions_s -= 1
+                if player.xp_potions_s > 0:
+                    efect = 50
+                    player.xp_potions_s -= 1
+                
+                else:
+                    empty_bag('Small XP Potions')  
 
             if potion_kind == '5':
-                efect = 200
-                player.xp_potions_m -= 1
+                if player.xp_potions_m > 0:
+                    efect = 200
+                    player.xp_potions_m -= 1
+
+                else:
+                    empty_bag('Medium XP Potions')  
 
             if potion_kind == '6':
-                efect = 600
-                player.xp_potions_l -= 1
+                if player.xp_potions_l > 0:
+                    efect = 600
+                    player.xp_potions_l -= 1
+
+                else:
+                    empty_bag('Medium XP Potions')  
 
             self.xp += efect
             return self.xp

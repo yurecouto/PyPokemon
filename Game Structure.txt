@@ -41,6 +41,7 @@
 			- health potions
 
 		* Scale the code
+			* update the pokemon change to work with the selection
 			* Create a block of code for each zone
 	
 ================= To Do List =================

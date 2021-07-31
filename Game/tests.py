@@ -4,11 +4,15 @@ from classes                import *
 from pokemons               import *
 from lists                  import *
 from random import choice
+from time import sleep
 
-p = Player('Yure')
+add(Bulbasaur)
+add(Charmander)
+add(Squirtle)
+add(Pikachu)
+add(Eevee)
+add(Nidorano)
 
-if p.potions > 0 and p.greatballs > 0 and p.ultraballs > 0 and p.masterballs > 0:
-    print('ok')
+selection_fill(Bulbasaur, Charmander, Squirtle, Pikachu, Eevee, Nidorano)
 
-else:
-    print('test')
+error_message('qualquer coisa')

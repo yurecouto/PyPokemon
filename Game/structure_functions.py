@@ -63,6 +63,47 @@ def explaination_1():
     print()
 
 
+def received_items(
+    item_1 = '', qtd_1 = 0,
+    item_2 = '', qtd_2 = 0,
+    item_3 = '', qtd_3 = 0,
+    item_4 = '', qtd_4 = 0,
+    item_5 = '', qtd_5 = 0,
+    item_6 = '', qtd_6 = 0,
+    txt = 0):
+
+    print('*' * 100)
+    print('|' + ' ' * 98 + '|')
+    if txt == 0:
+        print(f'|{"There are the items you will receive to clear this area:":^98}|') 
+
+    elif txt == 1:
+        print(f'|{"For clearing the last area, You will receive this items:":^98}|') 
+
+    print('|' + ' ' * 98 + '|')
+
+    if item_1 != '':
+        print(f"|{f'{item_1}      X {qtd_1}':^98}|")
+
+    if item_2 != '':
+        print(f"|{f'{item_2}      X {qtd_2}':^98}|")
+
+    if item_3 != '':
+        print(f"|{f'{item_3}      X {qtd_3}':^98}|")
+
+    if item_4 != '':
+        print(f"|{f'{item_4}      X {qtd_4}':^98}|")
+
+    if item_5 != '':
+        print(f"|{f'{item_5}      X {qtd_5}':^98}|")
+
+    if item_6 != '':
+        print(f"|{f'{item_6}      X {qtd_6}':^98}|")
+
+    print('|' + ' ' * 98 + '|')
+    print('*' * 100)
+
+
 def area_explaination(area):
     print()
     print('*' * 100)
@@ -198,9 +239,9 @@ def capture_explaination(player):
     masterballs = str('\033[1;95mMaster\033[m'+ '\033[1;37mballs\033[m')
 
     print('*' * 100)
-    print('|', ' ' * 96, '|')
+    print('|' + ' ' * 98 + '|')
     print(f'|{"Choose the pokeball you wanna use to capture":^98}|') 
-    print('|', ' ' * 96, '|')
+    print('|' + ' ' * 98 + '|')
     print(f'|{f"1 - {pokeballs}: {player.pokeballs} | 2 - {greatballs}: {player.greatballs} | 3 - {ultraballs}: {player.ultraballs} | 4 - {masterballs}: {player.masterballs}":^178}|')
     print('|', ' ' * 96, '|')
     print('*' * 100)
@@ -282,6 +323,16 @@ def selection_menu(txt):
     print()
 
 
+def empty_bag(item):
+    print()
+    print('*' * 100)
+    print('|' + ' ' * 98 + '|')
+    print('|' + f'{f"you can not use this Item, you dont have enough {item}!":^98}' + '|')
+    print('|' + ' ' * 98 + '|')
+    print('*' * 100)
+    print()
+
+
 def bag(player):
     print()
     print('*' * 100)
@@ -296,4 +347,14 @@ def bag(player):
     print('| 1 - ' + f'{"Super Potions  (Regenerates 50 HP)    =>":<9}' + f'{player.potions:>4}' +  '|| 5 - ' f'{"Medium XP Potions (Gives 200 XP)    =>":<11}' + f'{player.potions:>4}' + '|')
     print('| 2 - ' + f'{"Hyper Potions  (Regenerates 200 HP)   =>":<9}' + f'{player.potions:>4}' +  '|| 6 - ' f'{"Large Potions     (Gives 600 XP)    =>":<11}' + f'{player.potions:>4}' + '|')
     print('| 3 - ' + f'{"Max Potions    (Regenerates ALL HP)   =>":<11}' + f'{player.potions:>4}' + '||' f'{" " * 47}' + '|')
+    print('*' * 100)
+
+
+def error_message(txt):
+    print('*' * 100)
+    print('|' + ' ' * 98 + '|')
+    print('|' + '\033[1;91m' + f'{"ERROR":^98}' + '\033[m' + '|')
+    print('|' + ' ' * 98 + '|')
+    print('|' + '\033[1;91m' + f'{txt:^98}' + '\033[m' + '|')
+    print('|' + ' ' * 98 + '|')
     print('*' * 100)
