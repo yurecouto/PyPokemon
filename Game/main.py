@@ -33,6 +33,7 @@ while True:
 
                 explaination_1()
                 player.pokeballs = 10
+                player.potions   = 3
 
                 area_0 = len(object_forest)
                 area_1 = len(object_mount)
@@ -73,6 +74,7 @@ while True:
                             if pokedex_check(p_number) == True:
                                 p1 = pokemon_change(p_number)
 
+
                         if action == 1:
                             p1.atack(p2)
                             action_status(f'{p1.name} Atacked {p2.name}')            
@@ -106,7 +108,15 @@ while True:
                                 p1 = pokemon_change(p_number)
                                 
                         elif action == 4:
-                            pass
+                            bag(player)
+
+                            
+
+                            print()
+                            item = str(input('>>> '))
+                            print()
+
+                            p1.use_potions(player, item)
 
                         p2.atack(p1)
                         action_status(f'{p2.name} Atacked {p1.name}')

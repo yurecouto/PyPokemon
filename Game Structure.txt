@@ -35,11 +35,10 @@
 			- Create a menu between the areas to change the pokemon <<<<<<<<<<<<<<<<<<<<
 			- Force the player to change the pokemon if it's out of combat and have anothr pokemon in selection
 			
-		* Create items
-			* Create a Bag Menu
+		- Create items
+			- Create a Bag Menu
 			- Create a function to return the items effects 
 			- health potions
-			* evolutions rocks
 
 		* Scale the code
 			* Create a block of code for each zone

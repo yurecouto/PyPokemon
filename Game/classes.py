@@ -63,52 +63,6 @@ class Player:
         else:
             return False
 
-    def use_potions(self, potion_kind, pokemon):
-        if potion_kind in '0123':
-            if potion_kind == '0':
-                efect = 20
-                self.potions -= 1
-
-            if potion_kind == '1':
-                efect = 50
-                self.super_potions -= 1
-
-            if potion_kind == '2':
-                efect = 200
-                self.hyper_potions -= 1
-
-            if (pokemon.health + efect) >= pokemon.max_health:
-                pokemon.health == pokemon.max_health
-                print(pokemon.health)
-                return pokemon.health
-            
-            elif (pokemon.health + efect) < pokemon.max_health:
-                pokemon.health += efect
-                print(pokemon.health)
-                return pokemon.health
-
-            if potion_kind == '3':
-                pokemon.health == pokemon.max_health
-                self.max_potions -= 1
-                print(pokemon.health)
-                return pokemon.health
-
-        if potion_kind in '456':
-            if potion_kind == '4':
-                efect = 50
-                self.xp_potions_s -= 1
-
-            if potion_kind == '5':
-                efect = 200
-                self.xp_potions_m -= 1
-
-            if potion_kind == '6':
-                efect = 600
-                self.xp_potions_l -= 1
-
-            pokemon.xp += efect
-            return pokemon.xp
-
 
 class Pokemon:
     def __init__(self, name, number):
@@ -160,14 +114,17 @@ class Pokemon:
         if potion_kind in '0123':
             if potion_kind == '0':
                 efect = 20
+                # bloquear caso as poções não sejam suficientes
                 player.potions -= 1
 
             if potion_kind == '1':
                 efect = 50
+                # bloquear caso as poções não sejam suficientes
                 player.super_potions -= 1
 
             if potion_kind == '2':
                 efect = 200
+                # bloquear caso as poções não sejam suficientes
                 player.hyper_potions -= 1
 
             if (self.health + efect) >= self.max_health:
@@ -180,6 +137,7 @@ class Pokemon:
 
             if potion_kind == '3':
                 self.health == self.max_health
+                # bloquear caso as poções não sejam suficientes
                 player.max_potions -= 1
                 return self.health
 

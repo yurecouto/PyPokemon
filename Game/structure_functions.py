@@ -190,31 +190,6 @@ def game_over():
     print('            \______/     \_/    \_______/|__/                   ')
     print('                                                                ')
 
-'''# Individual card
-def my_pokemon(n, dictionary):
-    for p, i in dictionary.items():
-        if i['number'] == n:
-            print('------------------') 
-            print(f'|{p.name:^26}|')
-            print('------------------') 
-
-            for keys, values in i.items():
-                print(f'|{keys:<6}: {values:>9}|')
-
-            print('------------------')
-
-# Multiple card
-def my_pokedex():
-    for p, i in pokedex.items():
-        print('-------------------') 
-        print(f'|{p.name:^27}|')
-        print('-------------------') 
-
-        for keys, values in i.items():
-            print(f'|{keys:<6}: {values:>9}|')
-
-        print('-------------------')'''
-
 
 def capture_explaination(player):
     pokeballs   = str('\033[1;91mPoke\033[m'  + '\033[1;37mballs\033[m')
@@ -305,3 +280,20 @@ def selection_menu(txt):
     print('|' + ' ' * 98 + '|')
     print('*' * 100)
     print()
+
+
+def bag(player):
+    print()
+    print('*' * 100)
+    print('|' + ' ' * 98 + '|')
+    print('|' + f'{"This is your bag, here you can find a choose the items you wanna use in your Pokemons":^98}' + '|')
+    print('|' + f'{"Press the number of each item you want to use on this pokemon":^98}' + '|')
+    print('|' + ' ' * 98 + '|')
+    print('-' * 100)
+    print('|' + f'{"HP Potions":^49}' + '||' + f'{"XP Potions":^47}' + '|')
+    print('-' * 100)
+    print('| 0 - ' + f'{"Potions        (Regenerates 20 HP)    =>":<15}' + f'{player.potions:>4}' + '|| 4 - ' f'{"Small XP Potions  (Gives 50 XP)     =>":<12}' + f'{player.potions:>4}' + '|')
+    print('| 1 - ' + f'{"Super Potions  (Regenerates 50 HP)    =>":<9}' + f'{player.potions:>4}' +  '|| 5 - ' f'{"Medium XP Potions (Gives 200 XP)    =>":<11}' + f'{player.potions:>4}' + '|')
+    print('| 2 - ' + f'{"Hyper Potions  (Regenerates 200 HP)   =>":<9}' + f'{player.potions:>4}' +  '|| 6 - ' f'{"Large Potions     (Gives 600 XP)    =>":<11}' + f'{player.potions:>4}' + '|')
+    print('| 3 - ' + f'{"Max Potions    (Regenerates ALL HP)   =>":<11}' + f'{player.potions:>4}' + '||' f'{" " * 47}' + '|')
+    print('*' * 100)
