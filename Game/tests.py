@@ -13,6 +13,10 @@ add(Pikachu)
 add(Eevee)
 add(Nidorano)
 
+p1 = Charizard
+print(p1.name)
+
 selection_fill(Bulbasaur, Charmander, Squirtle, Pikachu, Eevee, Nidorano)
 
-error_message('qualquer coisa')
+p1 = selection_change(6)
+print(p1.name)

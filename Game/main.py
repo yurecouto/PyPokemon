@@ -147,7 +147,8 @@ while True:
                         action_status(f'{p2.name} Atacked {p1.name}')
                         sleep(1)
 
-                    xp = int(p2.max_xp / 7)
+                    base = randint(6, 8)
+                    xp = int(p2.max_xp / base)
                     p1.xp += xp
                     area_0 -= 1  
 
@@ -181,6 +182,99 @@ while True:
 
                 area_explaination('The Objects Mount')
                 # 5, 15
+
+                while area_1 > 0:
+                    pokedex_info_update(p1)
+                    p1.level_up()
+
+
+                    p2 = choice(object_forest)
+                    p2.set_level(5, 15)
+
+                    while p2.health > 0: 
+                        main_interface(p1, p2)
+                        action = str(input('>>> '))
+                        sleep(1)
+
+                        if pokedex_health_check() == False:
+                            break
+
+                        if p1.pokemon_out() == False:
+                            pokedex_cards()
+                            sleep(1)
+                            pokedex_explaination('\033[1;101mIn ONLY this area, you can use Pokemons directly from Pokedex\033[m')
+
+                            p_number = int(input('>>> '))
+
+                            if pokedex_check(p_number) == True:
+                                p1 = pokemon_change(p_number)
+
+                        if action == '1':
+                            p1.atack(p2)
+                            action_status(f'{p1.name} Atacked {p2.name}')   
+                            main_interface(p1, p2)
+                            sleep(1)                     
+         
+                        elif action == '2':
+                            if player.pokeballs == 0 and player.greatballs == 0  and player.ultraballs == 0 and player.masterballs == 0 :
+                                capture_status(p2, player, 3)
+                                sleep(1)
+                                break
+                                
+                            print()
+                            capture_explaination(player)
+
+                            print()
+                            ball = str(input('>>> '))
+                            print()
+                            sleep(1)                 
+
+                            if player.capture(p2, 'object_forest', ball) == True:
+                                capture_status(p2, player, 1)
+                                sleep(1)
+                                break
+                            
+                            if ball not in '1234':
+                                error_message('Please, Enter only the numbers reffering to the Pokeball types')        
+                                break   
+                        
+                            else:
+                                capture_status(p2, player, 2)
+                                sleep(1)
+
+                        elif action == '3':
+                            pokedex_cards()
+                            sleep(1)
+                            pokedex_explaination('\033[1;101mIn ONLY this area, you can use Pokemons directly from Pokedex\033[m')
+
+                            p_number = int(input('>>> '))
+
+                            if selection_check == True:
+                                p1 = selection_change(p_number)
+                                
+                        elif action == '4':
+                            bag(player)
+
+                            print()
+                            item = str(input('>>> '))
+                            print()
+                            sleep(1)
+
+                            p1.use_potions(player, item)
+                        
+                        else:
+                            error_message('Please, Enter only the numbers reffering to the Actions')
+                            break
+
+                        p2.atack(p1)
+                        sleep(1)
+                        action_status(f'{p2.name} Atacked {p1.name}')
+                        sleep(1)
+
+                    base = randint(6, 8)
+                    xp = int(p2.max_xp / base)
+                    p1.xp += xp
+                    area_1 -= 1 
 
                 break
 
