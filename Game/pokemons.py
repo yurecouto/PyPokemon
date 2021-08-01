@@ -265,6 +265,7 @@ object_center = [
     Articuno, Zapdos, Moltres, Mew, Mewtwo
     ]
 
+
 Bulbasaur.initial_level()
 Charmander.initial_level()
 Squirtle.initial_level()

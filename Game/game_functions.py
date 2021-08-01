@@ -135,4 +135,3 @@ def selection_change(p_number):
             if info['number'] == p_number:
                 return pokemon
             
-

@@ -304,5 +304,5 @@ class Steel(Pokemon):
 class Fairy(Pokemon):
     def __init__(self, name, number):
         super().__init__(name, number)
-        self.name = f'\033[1;37m{name}\033[m'
-        self.type = 'fairy'
+        self.name  = f'\033[1;37m{name}\033[m'
+        self.type  = 'fairy'

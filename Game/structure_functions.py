@@ -343,10 +343,10 @@ def bag(player):
     print('-' * 100)
     print('|' + f'{"HP Potions":^49}' + '||' + f'{"XP Potions":^47}' + '|')
     print('-' * 100)
-    print('| 0 - ' + f'{"Potions        (Regenerates 20 HP)    =>":<15}' + f'{player.potions:>4}' + '|| 4 - ' f'{"Small XP Potions  (Gives 50 XP)     =>":<12}' + f'{player.potions:>4}' + '|')
-    print('| 1 - ' + f'{"Super Potions  (Regenerates 50 HP)    =>":<9}' + f'{player.potions:>4}' +  '|| 5 - ' f'{"Medium XP Potions (Gives 200 XP)    =>":<11}' + f'{player.potions:>4}' + '|')
-    print('| 2 - ' + f'{"Hyper Potions  (Regenerates 200 HP)   =>":<9}' + f'{player.potions:>4}' +  '|| 6 - ' f'{"Large Potions     (Gives 600 XP)    =>":<11}' + f'{player.potions:>4}' + '|')
-    print('| 3 - ' + f'{"Max Potions    (Regenerates ALL HP)   =>":<11}' + f'{player.potions:>4}' + '||' f'{" " * 47}' + '|')
+    print('| 0 - ' + f'{"Potions        (Regenerates 20 HP)    =>":<15}' + f'{player.potions:>4}' +         '|| 4 - ' f'{"Small XP Potions  (Gives 50 XP)     =>":<12}' + f'{player.xp_potions_s:>4}' + '|')
+    print('| 1 - ' + f'{"Super Potions  (Regenerates 50 HP)    =>":<9}'  + f'{player.super_potions:>4}' +   '|| 5 - ' f'{"Medium XP Potions (Gives 200 XP)    =>":<11}' + f'{player.xp_potions_m:>4}' + '|')
+    print('| 2 - ' + f'{"Hyper Potions  (Regenerates 200 HP)   =>":<9}'  + f'{player.hyper_potions:>4}' +   '|| 6 - ' f'{"Large Potions     (Gives 600 XP)    =>":<11}' + f'{player.xp_potions_l:>4}' + '|')
+    print('| 3 - ' + f'{"Max Potions    (Regenerates ALL HP)   =>":<11}' + f'{player.max_potions:>4}' +     '||' f'{" " * 47}' + '|')
     print('*' * 100)
 
 

@@ -20,7 +20,7 @@ atack_rules = [
     [1, .5, 1, 1, 1, 1, 2, .5, 1, 1, 1, 1, 1, 1, 2, 2, .5, 1]           
 ]
 
-#This dict it's about the atacker types
+#This dict it's about the atacker type
 atack_types = {
     'normal':    0,
     'fire':      1,
