@@ -21,7 +21,7 @@ there are 7 python files:
 
 Even though the names are self explanatory bellow will be explanated the function of each file
 
-### Classes
+### pokemon_class
   
   Here we have two main classes, Pokemon and Player, in pokemons, there are the pokemon atributes
 like name, number, xp, max_xp, lvl, health, max_health, the explaination of these atributes are not going
@@ -46,6 +46,8 @@ to be done now, the methods of each pokemon are:
                                          
 - pokemon_out(self)               =>         This method returns a boolean valor based in the 
                                          pokemon.health.
+
+### player_class
                                          
   And the Player's class represent's the player, and haves atributes referent to the bag of the
 pokemon trainer, like Pokeballs, Potions and evolution stones, the only atribute are the capture atribute

@@ -40,10 +40,10 @@
 			- Create a function to return the items effects 
 			- health potions
 
-		* Scale the code
+		- Scale the code
 			- update the pokemon change to work with the selection
-			* Create a block of code for each zone
+			- Create a block of code for each zone
 	
 ================= To Do List =================
-* use the interval between xp and max xp to make the xp bar
-* improve the action 3 to the selection of 6 pokemon
+* update the readme
+* clear the screen
